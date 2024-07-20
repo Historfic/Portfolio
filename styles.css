@@ -70,9 +70,8 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 
 /* JOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOYY Eto lng yun edit ko sa CSS*/
-.italic-centered {
+.italic-description {
     font-style: italic;
-    text-align: center;
 }
 
 
@@ -360,8 +359,8 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     color: white;
     margin-bottom: 0px;
     font-family: 'Montserrat',sans-serif;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -866,6 +865,7 @@ footer{
 
 .skill-icon-container p{
     font-size: 0.7rem;
+    text-align: justify;
 }
 
 .skill-description{
@@ -1101,6 +1101,24 @@ footer{
 .description-container h1,h2{
     font-size: 1.1rem;
 }
+
+
+.new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.news{
+    width: 500vw;
+}
+
+.skill-icon-container p{
+    width: 100vw;
+}
+
 }
 
 @media only screen and (max-width: 320px){
@@ -1123,6 +1141,22 @@ footer{
     width:auto;
     /* align-self: end;  MAKE THE IMG BE PLACED AT THE BOTTOM OF THE CONTAINER AND NOT MOVE WHEN ZOOMED OUT */ /*WITH container1 with display:grid;, grid-template-columns:1fr 1fr*/
     bottom: 0;
+}
+
+.new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.news{
+    width: 500vw;
+}
+
+.skill-icon-container p{
+    width: 100vw;
 }
 
 .spans{
