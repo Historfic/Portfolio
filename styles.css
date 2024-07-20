@@ -67,6 +67,15 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     align-items: center;
     display: flex;
 }
+
+
+/* JOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOYY Eto lng yun edit ko sa CSS*/
+.italic-centered {
+    font-style: italic;
+    text-align: center;
+}
+
+
 /*START OF CONTAINER1////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
