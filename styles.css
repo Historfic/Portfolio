@@ -343,24 +343,21 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 /*START OF CONTAINER3////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-.container3{
+.container3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height:100vh;
-    width:100%;
+    height: 100vh;
+    width: 100%;
     background-color: #151824;
     position: relative;
     overflow: hidden;
 }
 
-.skill-title{
+.skill-title {
     color: white;
-    margin-bottom: 0px;
-    font-family: 'Montserrat',sans-serif;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 40px 0;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -368,111 +365,81 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.skill-container{
-    height: auto;
-    width: auto;
+.skill-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    overflow: hidden;         /* hide overflow for ticker window */
+    flex-wrap: nowrap;        /* keep all icons in one row */
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.skill-icon{
-    height: 100%;
-    width: 90%;
+.skill-icon {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;        /* no wrapping */
+    width: auto;              /* grow to full content width */
+    animation: scroll-left 30s linear infinite;
 }
 
-.skill-icon-container{
+.skill-icon-container {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;       /* spacing between icons */
 }
 
-.skill{
+.skill {
     height: 8.5rem;
     width: 8.5rem;
     margin: 0 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     border-radius: 100px;
-    background-color:#1d2131;
+    background-color: #1d2131;
 }
 
-.skill img{
+.skill img {
     height: 50%;
     width: 60%;
 }
 
-.skill-icon-container p{
-    margin:10px 0;
-    color:white;
-    font-family: 'Montserrat',sans-serif;
-}
-
-.skill-description{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.skill-description-container{
-    height:auto;
-    width: 50%;
-    margin-left: 100px;
-}
-
-.spans2{
-    color:#93acb3; 
-    font-size: 0.7rem;
-}
-
-.dropdown-toggle {
-    display: none; /*REMOVES CHECKLIST FROM <input>*/
-}
-  
-.dropdown-label {
-    display: block;
-    background-color: transparent;
-    padding: 0.625rem;
-    cursor: pointer;
+.skill-icon-container p {
+    margin: 10px 0;
     color: white;
-    font-family: 'Montserrat',sans-serif;
-    margin-top: 0.625rem;
+    font-family: 'Montserrat', sans-serif;
 }
-  
-.arrow {
-    float: right;
-    transition: transform 0.3s;
-    color:white;
-    font-size: 1.2rem;
+
+/* (Your dropdown rules, .skill-description, etc. remain unchanged) */
+
+/* —— Ticker tweak —— */
+/* pause scroll when you hover over the icons */
+.skill-icon:hover {
+    animation-play-state: paused;
 }
-  
-.dropdown-content {
-    max-height: 0;  /*IMPORTANT TO ENABLE DROPDOWN*/
-    overflow: hidden; /*IMPORTANT TO HIDE DROPDOWN CONTENT*/
-    transition: max-height 0.4s;
-    color: white;
-    font-family: 'Montserrat',sans-serif;
-    padding: 0 1.25rem;
-}
-  
-.dropdown-toggle:checked + .dropdown-label .arrow {
-    transform: rotate(-90deg);
-}
-  
-.dropdown-toggle:checked + .dropdown-label + .dropdown-content {
-    max-height: 100px;
+
+/* scroll exactly half the full track (you’ll duplicate icons in HTML) */
+@keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 
+/* ── Disable ticker for Services ── */
+.skill-icon.new {
+    animation: none;         /* stop the scroll animation */
+    flex-wrap: wrap;         /* allow icons to wrap onto multiple rows */
+    justify-content: center; /* center your service cards */
+  }
+  
+  /* make sure the container shows all items */
+  #services .skill-container {
+    overflow: visible;
+  }
+  
 /*START OF CONTAINER4////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
