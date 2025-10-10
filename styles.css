@@ -130,7 +130,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 .service-card:hover .icon-placeholder {
     background: var(--accent-primary);
-    color: white;
+    color: var(--text-primary);
     transform: scale(1.1);
 }
 
@@ -352,7 +352,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 #theme-toggle-btn:hover {
     background: var(--accent-primary);
-    color: white;
+    color: var(--text-primary);
     border-color: var(--accent-primary);
     transform: scale(1.1);
 }
@@ -366,7 +366,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     height:100%;
     width: 6rem;
     max-width: 130px;
-    color: white;
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -420,7 +420,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 .intro{
     margin: 0 0 0 20%;
-    color: white;
+    color: var(--text-primary);
     font-size: 3rem;
     font-family: 'Montserrat',sans-serif;
     width: auto;
@@ -553,7 +553,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .intro-title{
-    color: white;
+    color: var(--text-primary);
     font-family: 'Montserrat',sans-serif;
     margin-top: 5rem;    
     margin-bottom: 3rem;
@@ -582,7 +582,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .description-container h1,h2,p{
-    color: white;
+    color: var(--text-primary);
     font-family: 'Montserrat',sans-serif;
     margin: 0;
 }
@@ -680,7 +680,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     display: flex;
     justify-content: center;
     margin-top: -1rem;
-    color: white;
+    color: var(--text-primary);
     background-color: #1d2131;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -695,7 +695,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     height: auto;
     max-width: 75%;
     width: auto;
-    color: white;
+    color: var(--text-primary);
     display: flex;
     justify-content: center;
     text-align:justify;
@@ -780,7 +780,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 
 .skill-icon-container p {
     margin: 10px 0;
-    color: white;
+    color: var(--text-primary);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -826,7 +826,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .contact-title{
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 0px;
     font-family: 'Montserrat',sans-serif;
     margin-top: 5rem;
@@ -877,7 +877,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .contact-message input:valid{
-    color: white;
+    color: var(--text-primary);
 }
 
 .contact-message input:invalid{
@@ -885,11 +885,11 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .contact-message textarea:valid{
-    color: white;
+    color: var(--text-primary);
 }
 
 .contact-message button{
-    color: white;
+    color: var(--text-primary);
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     border-radius: 10px;
     font-family: 'Montserrat',sans-serif;
@@ -942,7 +942,7 @@ body::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--text-primary);
     font-size: 1.5rem;
 }
 
@@ -1298,7 +1298,7 @@ footer{
 }
 
 .skill-title {
-    color: white;
+    color: var(--text-primary);
     font-family: 'Montserrat', sans-serif;
     margin-top: 2.5rem; /* Adjust for responsiveness */
     margin-bottom: 1.5rem;
@@ -1455,7 +1455,7 @@ footer{
 }
 
 .skill-title {
-    color: white;
+    color: var(--text-primary);
     font-family: 'Montserrat', sans-serif;
     margin-top: 2.5rem; /* Adjust for responsiveness */
     margin-bottom: 1.5rem;
@@ -1805,7 +1805,7 @@ footer{
 
 .book-meeting-btn {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
+    color: var(--text-primary);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
     border: none;
 }
@@ -1824,7 +1824,7 @@ footer{
 
 .download-cv-btn:hover {
     background: #3b82f6;
-    color: white;
+    color: var(--text-primary);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
 }
@@ -1843,7 +1843,7 @@ footer{
 }
 
 .calendly-modal-content {
-    background-color: white;
+    background-color: var(--text-primary);
     margin: 2% auto;
     padding: 20px;
     border-radius: 12px;
