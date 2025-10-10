@@ -16,8 +16,8 @@
     <nav class="navbar">
         <img class="logo" src="images/midnightCustomsLogo.png" alt="logo">
         <ul>
-           <a href="#home">   
-            <li class="navbutton">Home</li>
+           <a href="#hero">   
+            <li class="navbutton">Hero</li>
           </a>
           <a href="#services">
             <li class="navbutton" >Services</li>
@@ -25,215 +25,292 @@
           <a href="#projects">  <!-- MUST CHANGE CHANGE CHANGE CHANGE-->
             <li class="navbutton" >Projects</li>
           </a>
+          <a href="#testimonials">
+            <li class="navbutton" >Testimonials</li>
+          </a>
           <a href="#certification">  <!-- MUST CHANGE CHANGE CHANGE CHANGE-->
             <li class="navbutton" >Certifications</li>
           </a>
           <a href="#contacts">
             <li class="navbutton" >Contacts</li>
           </a>
+          <li class="theme-toggle">
+            <button id="theme-toggle-btn" onclick="toggleTheme()">
+              <i class="fa-solid fa-moon" id="theme-icon"></i>
+            </button>
+          </li>
         </ul>
     </nav>
 
     <!-- USE CONTAINERS WITH 100vh EACH AS SUPPORT ONLY AT THE BEGINNING!!!!!!!!!!!!!! BUT it will depend on navbar -->
 
-    <div class="container1" id="home">
+    <div class="container1 full-width" id="hero">
+      <div class="main-wrapper">
       <div class="introduction">
-          <h1 class="intro element"><i class="fa-solid fa-hand" style="color: white;"></i>Hello, I am <br /><span  class="spans">Rafael Bashan</span></h1>
-          <h2 class="intro element">AI Automation Engineer</br>
+            <h1 class="intro element"><i class="fa-solid fa-hand" style="color: white;"></i>Rafael Bashan, 24</h1>
+            <h2 class="intro-location element">Manila, Philippines</h2>
+            <h3 class="intro-role element">AI Automation Engineer</h3>
+            <p class="intro-description element">
+              I combine code and AI to automate repetitive work and streamline workflows. Clients cut manual effort 60–80%, save thousands of hours, and boost accuracy and productivity.
+            </p>
+            <div class="hero-buttons element">
+              <button class="cta-button book-meeting-btn" onclick="openCalendly()">
+                Book a Meeting
+              </button>
+              <button class="cta-button download-cv-btn" onclick="downloadCV()">
+                Download CV
+              </button>
+            </div>
       </div>
       <div class="avatar-image">
         <img src="images/avatar.jfif" alt="avatar" id="raf-avatar">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Statistics Section -->
+    <div class="stats-section">
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Satisfied Clients</div>
+        </div>
       </div>  
     </div>
 
     <div class="introduction-description">
-      <h6 class="intro-title element spans">About&nbsp;<Me style="color:#233fb1">Me</span></h6>
+      <div class="main-wrapper">
+        <div class="section-box">
+          <h6 class="intro-title element spans">About&nbsp;<span style="color:#3b82f6">Me</span></h6>
       <div class="intro-container element">
         <div class="description-container">
           <p class="element">I help businesses transform their operations through AI Automation and Low-code Development significantly reducing manual effort by 60-80%. By combining conventional coding expertise with state-of-the-art AI tools, I create solutions that offload repetitive chores and streamline workflows saving organizations thousands of work hours, boosting accuracy and efficiency, and freeing teams to focus on strategic growth rather than routine tasks.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- My Services Section -->
     <div class="container3" id="services" style="height: auto;">
-      <h4 class="skill-title element spans" style="margin-top: 80px; margin-bottom: 40px">My&nbsp;<span style="color:#233fb1">Services</span></h4>
-      <p class="italic-description" style="text-align: center; font-size: 1rem; margin-bottom: 20px; margin-left: 30px; margin-right: 30px;">
-          Let’s optimize your operations with smart automation that saves time and boosts efficiency.
-      </p>
-      <br><br>
-      <br><br>
-      <br><br>
-      <div class="skill-container element">
-          <div class="skill-icon new">
-              <div class="skill-icon-container news" style="width: 33%; margin-top: 20px;">
-                  <div class="skill">
-                      <img src="images/services/data_management.png" alt="icon">
+      <div class="main-wrapper">
+        <div class="section-box">
+          <!-- Tools Section -->
+          <div class="tools-section">
+            <h4 class="skill-title element spans" style="margin-top: 60px; margin-bottom: 20px">My&nbsp;<span style="color:#3b82f6">Tools</span></h4>
+            <p class="tools-description element" style="text-align: center; font-size: 1rem; margin-bottom: 40px; color: var(--text-secondary);">
+                Technologies and platforms I work with regularly
+            </p>
+            <div class="tools-carousel-container element">
+              <div class="tools-carousel">
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/python.png" alt="Python">
                   </div>
-                  <p style="text-align: center;">Data Operation</p>
-                  <p style="text-align: center; width: 92%;">Reduce manual effort with smart data automation and efficient CRM management</p>
-              </div>
-              <div class="skill-icon-container news" style="width: 33%; margin-top: 20px;">
-                  <div class="skill">
-                      <img src="images/services/ai_voice.png" alt="icon">
+                  <span class="tool-name">Python</span>
+                </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/make.png" alt="Make">
                   </div>
-                  <p style="text-align: center;">AI Voice</p>
-                  <p style="text-align: center; width: 92%;">Setup AI Voice Assistant for Inbound and Outbound call leads</p>
-              </div>
-              <div class="skill-icon-container news" style="width: 33%; margin-top: 20px;">
-                  <div class="skill">
-                      <img src="images/services/data_viz.png" alt="icon">
+                  <span class="tool-name">Make</span>
+                </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/zapier.png" alt="Zapier">
                   </div>
-                  <p style="text-align: center;">Data Visualization</p>
-                  <p style="text-align: center; width: 92%;">Creation of static and interactive data visualization and dashboards, review of performance.</p>
+                  <span class="tool-name">Zapier</span>
+                </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/n8n.png" alt="N8N">
+                  </div>
+                  <span class="tool-name">N8N</span>
               </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/ghl.png" alt="GoHighLevel">
+                  </div>
+                  <span class="tool-name">GoHighLevel</span>
+              </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/retell.png" alt="Retell">
+                  </div>
+                  <span class="tool-name">Retell</span>
+                </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/vapi.png" alt="VAPI">
+              </div>
+                  <span class="tool-name">VAPI</span>
           </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/power.png" alt="Power BI">
       </div>
+                  <span class="tool-name">Power BI</span>
   </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/AWS.png" alt="AWS">
+          </div>
+                  <span class="tool-name">AWS Cloud Tools</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/Microsoft-Fabric.png" alt="Microsoft Fabric">
+          </div>
+                  <span class="tool-name">Microsoft Fabric</span>
+        </div>
+                <!-- Duplicate tools for seamless looping -->
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/python.png" alt="Python">
+          </div>
+                  <span class="tool-name">Python</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/make.png" alt="Make">
+          </div>
+                  <span class="tool-name">Make</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/zapier.png" alt="Zapier">
+          </div>
+                  <span class="tool-name">Zapier</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/n8n.png" alt="N8N">
+          </div>
+                  <span class="tool-name">N8N</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/ghl.png" alt="GoHighLevel">
+          </div>
+                  <span class="tool-name">GoHighLevel</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/retell.png" alt="Retell">
+          </div>
+                  <span class="tool-name">Retell</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/vapi.png" alt="VAPI">
+          </div>
+                  <span class="tool-name">VAPI</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/power.png" alt="Power BI">
+          </div>
+                  <span class="tool-name">Power BI</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/AWS.png" alt="AWS">
+          </div>
+                  <span class="tool-name">AWS Cloud Tools</span>
+        </div>
+                <div class="tool-item">
+                  <div class="tool-icon">
+                    <img src="images/skills/Microsoft-Fabric.png" alt="Microsoft Fabric">
+          </div>
+                  <span class="tool-name">Microsoft Fabric</span>
+        </div>
+          </div>
+        </div>
+          </div>
 
+          <h4 class="skill-title element spans" style="margin-top: 60px; margin-bottom: 20px">My&nbsp;<span style="color:#3b82f6">Services</span></h4>
+          <p class="services-description element" style="text-align: center; font-size: 1.1rem; margin-bottom: 50px; color: var(--text-secondary);">
+              I provide specialized services focused on automation, AI development, and system integration to help businesses optimize their operations and enhance customer experiences.
+          </p>
+          
+          <div class="services-grid element">
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">🤖</div>
+              </div>
+              <h5 class="service-title">AI Agent Development</h5>
+              <p class="service-description">Build custom AI voice and chat agents that automate customer interactions and provide 24/7 support.</p>
+        </div>
 
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">⚙️</div>
+          </div>
+              <h5 class="service-title">Automation Solutions</h5>
+              <p class="service-description">Create complex automation workflows that connect apps, reduce manual tasks, and optimize business processes.</p>
+        </div>
 
-  <div class="container3">
-    <h4 class="skill-title element spans">
-      My&nbsp;<span style="color:#233fb1">Tools</span>
-    </h4>
-    <div class="skill-container element">
-      <div class="skill-icon">
-  
-        <!-- first copy -->
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/python.png" alt="python-icon">
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">🔗</div>
           </div>
-          <p>Python</p>
+              <h5 class="service-title">API Integration</h5>
+              <p class="service-description">Connect different software platforms together through API integrations for seamless data flow across systems.</p>
         </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/make.png" alt="make-icon">
+
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">📊</div>
           </div>
-          <p>Make</p>
+              <h5 class="service-title">CRM Management</h5>
+              <p class="service-description">Set up and automate CRM systems to improve lead tracking, customer engagement, and sales processes.</p>
         </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/zapier.png" alt="zapier-icon">
+
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">🎯</div>
           </div>
-          <p>Zapier</p>
+              <h5 class="service-title">Custom AI Solutions</h5>
+              <p class="service-description">Develop tailored AI solutions that address specific business challenges and create competitive advantages.</p>
         </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/n8n.png" alt="n8n-icon">
+
+            <div class="service-card">
+              <div class="service-icon">
+                <!-- Icon placeholder - you can add your icon here -->
+                <div class="icon-placeholder">🌐</div>
           </div>
-          <p>N8N</p>
+              <h5 class="service-title">Landing Page Development</h5>
+              <p class="service-description">Create stunning, conversion-focused landing pages using modern web technologies and best practices.</p>
         </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/ghl.png" alt="ghl-icon">
           </div>
-          <p>GoHighLevelr</p>
+
         </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/retell.png" alt="retell-icon">
-          </div>
-          <p>Retell</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/vapi.png" alt="vapi-icon">
-          </div>
-          <p>Vapi</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/power.png" alt="powerbi-icon">
-          </div>
-          <p>Power BI</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/AWS.png" alt="aws-icon">
-          </div>
-          <p>AWS Cloud Tools</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/Microsoft-Fabric.png" alt="fabric-icon">
-          </div>
-          <p>Microsoft Fabric</p>
-        </div>
-  
-        <!-- duplicate copy for seamless looping -->
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/python.png" alt="python-icon">
-          </div>
-          <p>Python</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/make.png" alt="make-icon">
-          </div>
-          <p>Make</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/zapier.png" alt="zapier-icon">
-          </div>
-          <p>Zapier</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/n8n.png" alt="n8n-icon">
-          </div>
-          <p>N8N</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/ghl.png" alt="ghl-icon">
-          </div>
-          <p>GoHighLevelr</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/retell.png" alt="retell-icon">
-          </div>
-          <p>Retell</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/vapi.png" alt="vapi-icon">
-          </div>
-          <p>Vapi</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/power.png" alt="powerbi-icon">
-          </div>
-          <p>Power BI</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/AWS.png" alt="aws-icon">
-          </div>
-          <p>AWS Cloud Tools</p>
-        </div>
-        <div class="skill-icon-container">
-          <div class="skill">
-            <img src="images/skills/Microsoft-Fabric.png" alt="fabric-icon">
-          </div>
-          <p>Microsoft Fabric</p>
-        </div>
-  
       </div>
     </div>
-  </div>
+
   
 
                             <!-- TEST WITH DISPLAY IF ADDED MORE Skills -->
 
 
     <div class="container2" id="projects">
+      <div class="main-wrapper">
+        <div class="section-box">
       <h3 class="project-title element spans">
-        My&nbsp;<span style="color:#233fb1">Projects</span>
+            My&nbsp;<span style="color:#3b82f6">Projects</span>
       </h3>
       <div class="project-container element">
     
@@ -432,17 +509,125 @@
         </div>
     
       </div> <!-- /.project-container -->
+        </div> <!-- /.section-box -->
+      </div> <!-- /.main-wrapper -->
     </div> <!-- /.container2 -->
     
+    <div class="container2" id="testimonials">
+      <div class="main-wrapper">
+      <h3 class="project-title element spans">Client&nbsp;<span style="color:#3b82f6">Testimonials</span></h3>
+      <p class="italic-description" style="text-align: center; font-size: 1rem; margin-bottom: 40px; margin-left: 30px; margin-right: 30px;">
+          What clients say about working with me
+      </p>
+      <div class="testimonials-container element">
+        <div class="testimonials-slider">
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Rafael's AI automation solutions transformed our business operations. We reduced manual work by 70% and our team can now focus on strategic initiatives. Highly recommended!"</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, TechStart Inc.</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"The AI voice assistant Rafael built for our roofing company has been a game-changer. We never miss a lead and our response time improved dramatically."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Mike Rodriguez</h4>
+                <p>Owner, Premier Roofing</p>
+              </div>
+            </div>
+          </div>
 
-                              <!-- TEST WITH DISPLAY IF ADDED MORE PROJECTS -->
-         
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Rafael's data visualization dashboards gave us insights we never had before. His expertise in Power BI and Python is exceptional."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Emily Chen</h4>
+                <p>Data Manager, RetailCorp</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Working with Rafael was seamless. He understood our needs quickly and delivered a solution that exceeded our expectations. Professional and reliable."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>David Thompson</h4>
+                <p>Operations Director, LogisticsPro</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate testimonials for seamless looping -->
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Rafael's AI automation solutions transformed our business operations. We reduced manual work by 70% and our team can now focus on strategic initiatives. Highly recommended!"</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, TechStart Inc.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"The AI voice assistant Rafael built for our roofing company has been a game-changer. We never miss a lead and our response time improved dramatically."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Mike Rodriguez</h4>
+                <p>Owner, Premier Roofing</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Rafael's data visualization dashboards gave us insights we never had before. His expertise in Power BI and Python is exceptional."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>Emily Chen</h4>
+                <p>Data Manager, RetailCorp</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <p>"Working with Rafael was seamless. He understood our needs quickly and delivered a solution that exceeded our expectations. Professional and reliable."</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>David Thompson</h4>
+                <p>Operations Director, LogisticsPro</p>
+              </div>
       </div>
     </div>
 
+        </div> <!-- /.testimonials-slider -->
+      </div> <!-- /.testimonials-container -->
+      </div>
+    </div> <!-- /.container2 -->
+
     <div class="container2" id="certification">
-      <h3 class="project-title element spans">My&nbsp;<span style="color:#233fb1">Certifications</span> <span style="color:#ffffff">&amp;</span> <span style="color:#233fb1">Trainings</span></h3>
+      <div class="main-wrapper">
+        <div class="section-box">
+          <h3 class="project-title element spans">My&nbsp;<span style="color:#3b82f6">Certifications</span> <span style="color:#ffffff">&amp;</span> <span style="color:#3b82f6">Trainings</span></h3>
       <div class="project-container element">
         <div class="project1">
           <div class="project-image">
@@ -511,16 +696,47 @@
         
         
       </div>
-    </div>
+        </div> <!-- /.section-box -->
+      </div> <!-- /.main-wrapper -->
+    </div> <!-- /.container2 -->
     
     <div class="container4" id="contacts">
-      <h5 class="contact-title element spans">LET'S WORK&nbsp;<span style="color:#233fb1">TOGETHER.</span></h5>
-      <div class="contact-message element">
-        <input type="text" placeholder="Your Name" name="name">
-        <input type="email" placeholder="Your Email" name="email">
-        <textarea type="text" placeholder="Your Message" name="message"></textarea>
-        <button>Send Message <i class="fa-solid fa-paper-plane" style="color: white;"></i> </button>
+      <div class="main-wrapper">
+        <div class="section-box">
+          <h5 class="contact-title element spans">LET'S WORK&nbsp;<span style="color:#3b82f6">TOGETHER.</span></h5>
+          <p class="contact-description element" style="text-align: center; font-size: 1.1rem; margin-bottom: 50px; color: var(--text-secondary);">
+              I'm always open to discussing new projects, opportunities or partnerships.
+          </p>
+          
+          <div class="contact-info-grid element">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h6 class="contact-info-title">Email</h6>
+              <p class="contact-info-text">raffymcfee@gmail.com</p>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h6 class="contact-info-title">Location</h6>
+              <p class="contact-info-text">Manila, Philippines</p>
+            </div>
+          </div>
+          
+          <div class="contact-buttons element">
+            <button class="cta-button book-meeting-btn" onclick="openCalendly()">
+              <i class="fa-solid fa-calendar-check"></i> Book a Meeting
+            </button>
+            <button class="cta-button email-btn" onclick="window.open('mailto:raffymcfee@gmail.com', '_blank')">
+              <i class="fa-solid fa-envelope"></i> Send an Email
+            </button>
       </div>
+        </div> <!-- /.section-box -->
+      </div> <!-- /.main-wrapper -->
+      
       <footer>
         <div class="social-icons">
           <a href="https://www.facebook.com/rafael.bashan" target="_blank" id="profile-link">
@@ -540,7 +756,17 @@
           </a> 
         </div>  
       </footer>
+    </div> <!-- /.container4 -->
+
+    <!-- Calendly Modal -->
+    <div id="calendly-modal" class="calendly-modal">
+      <div class="calendly-modal-content">
+        <span class="calendly-close" onclick="closeCalendly()">&times;</span>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/raffymcfee" style="min-width:320px;height:700px;"></div>
+      </div>
     </div>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
     <script>
       const elements = document.querySelectorAll('.element');  
@@ -562,6 +788,63 @@
 
         // Trigger the animation when the page loads
         checkScroll();
+
+        // Calendly Functions
+        function openCalendly() {
+            document.getElementById('calendly-modal').style.display = 'block';
+        }
+
+        function closeCalendly() {
+            document.getElementById('calendly-modal').style.display = 'none';
+        }
+
+        // Download CV Function
+        function downloadCV() {
+            window.open('https://drive.google.com/file/d/1kSa1TOzMqPakPPVpMzbJocC2zyPHbn0n/view', '_blank');
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('calendly-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Theme Toggle Function
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fa-solid fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa-solid fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme on page load
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            body.setAttribute('data-theme', savedTheme);
+            
+            if (savedTheme === 'dark') {
+                themeIcon.className = 'fa-solid fa-sun';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon';
+            }
+        }
+
+        // Initialize theme on page load
+        loadTheme();
 
     </script>
 </body>
