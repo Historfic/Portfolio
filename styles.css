@@ -283,12 +283,12 @@ a { color: inherit; }
 .stats dd { order: 1; margin: 0; font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); }
 
 /* Portrait with the live flow */
-.hero-visual { position: relative; padding-bottom: 92px; }
+.hero-visual { position: relative; }
 
 /* The v2 photo is already a circle on black, so the frame is a circle too */
 .portrait {
-  width: 88%;
-  margin-left: auto;
+  width: 82%;
+  margin-inline: auto;
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1 / 1;
@@ -297,12 +297,10 @@ a { color: inherit; }
 }
 .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
+/* Sits below the photo, never over it */
 .flow {
-  position: absolute;
-  left: -36px;
-  right: 24px;
-  bottom: 0;
-  margin: 0;
+  position: relative;
+  margin: 28px 0 0;
   padding: 18px 20px;
   list-style: none;
   background: rgba(12, 26, 51, 0.94);
@@ -652,9 +650,7 @@ a { color: inherit; }
   .site-nav .nav-cta { margin: 8px 0 0; text-align: center; }
 
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-visual { max-width: 440px; width: 100%; margin-inline: auto; padding-bottom: 0; }
-  .portrait { width: 82%; margin-inline: auto; }
-  .flow { position: relative; left: auto; right: auto; bottom: auto; margin: -36px 8px 0; }
+  .hero-visual { max-width: 440px; width: 100%; margin-inline: auto; }
   .services { grid-template-columns: 1fr; }
   .contact .wrap { grid-template-columns: 1fr; }
 }
