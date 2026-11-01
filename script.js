@@ -16,6 +16,9 @@ const TOOLS = [
 
 // group = which filter the project sits under; cat = the label shown on the card
 const PROJECTS = [
+  { title: "AI UGC video engine: fact-checked plumbing videos for PlumbersStock", cat: "AI video", group: "automation",
+    tools: "Claude Code, Node.js, Higgsfield API, Soul V2, Kling 3.0 Pro, ffmpeg, n8n",
+    link: "case-studies/ai-ugc-video-engine.html", img: "images/v2/case-studies/ai-ugc-video-engine/thumb.jpg" },
   { title: "Assistant: an AI chief of staff for a multi-business operator", cat: "AI agent", group: "agents",
     tools: "Claude Code, React, Python, Claude API, OpenAI (embeddings and Whisper), Redis, Vercel, Telegram, Gmail, Outlook, Smartsheet, Procore, Square POS", },
   { title: "Alpha & Omega: team time and payroll tracker", cat: "Automation", group: "automation",
@@ -266,8 +269,11 @@ function setupCalendly() {
   });
 }
 
-renderTools();
-renderProjects();
-renderCerts();
+// Case study pages share the header and Calendly but have no lists to render.
+if (document.getElementById("projects")) {
+  renderTools();
+  renderProjects();
+  renderCerts();
+}
 setupNav();
 setupCalendly();

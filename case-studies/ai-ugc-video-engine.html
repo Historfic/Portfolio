@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI UGC video engine: case study | Rafael Bashan</title>
+  <meta name="description" content="How I built an AI UGC video pipeline for PlumbersStock: every claim checked against manufacturer pages, every image approved, about $1.08 a video.">
+  <meta property="og:title" content="AI UGC videos with the facts checked first | Rafael Bashan">
+  <meta property="og:description" content="A case study: three AI how-to videos for PlumbersStock, with every claim sourced and every image approved before any money went on video.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/ai-ugc-video-engine/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: AI video for PlumbersStock</p>
+          <h1>AI UGC videos with the facts checked first</h1>
+          <p class="hero-intro">PlumbersStock wanted short, UGC-style how-to videos without the one wrong detail that makes a plumber stop watching. I built a pipeline that checks each claim against manufacturer pages, has a person approve every image, and only then pays for video.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#videos">Watch the videos</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>pilot videos</dt><dd>3</dd></div>
+            <div><dt>average AI cost per video</dt><dd>$1.08</dd></div>
+            <div><dt>working days</dt><dd>5</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="Example: how the grease video moved through the pipeline">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Claim checked</b><span>Moen: petroleum "may react with the rubber seals"</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Still approved by a person</b><span>Short trimmed nail, thin film, O-ring seated</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Clip kept</b><span>$0.28, reviewed frame by frame</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="videos">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The three pilot videos</h2>
+          <p>Each one runs problem, fix, product. The problem and fix are AI-generated; the product photo is real. They play without sound, so the on-screen text carries the message.</p>
+        </div>
+        <div class="case-videos">
+          <figure class="case-video is-wide">
+            <video controls playsinline preload="none" poster="../images/v2/case-studies/ai-ugc-video-engine/p1-poster.jpg" aria-label="PVC primer video, 11 seconds, no sound">
+              <source src="../images/v2/case-studies/ai-ugc-video-engine/p1.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <h3>"You primed it. Then the phone rang."</h3>
+              <p>16:9 for YouTube, 11 seconds. Featured product: Christy's Red Hot Blue Glue.</p>
+              <p>Source, Oatey: "assembled within five minutes of primer application".</p>
+            </figcaption>
+          </figure>
+          <figure class="case-video is-tall">
+            <video controls playsinline preload="none" poster="../images/v2/case-studies/ai-ugc-video-engine/p2-poster.jpg" aria-label="PTFE tape video, 10 seconds, no sound">
+              <source src="../images/v2/case-studies/ai-ugc-video-engine/p2.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <h3>"Why your tape shreds every time"</h3>
+              <p>9:16 for TikTok and Reels, 10 seconds. Featured product: ProSource PTFE tape.</p>
+              <p>Source, Oatey: "Wrap the tape clockwise, following the same direction that the fitting will turn during assembly."</p>
+            </figcaption>
+          </figure>
+          <figure class="case-video is-tall">
+            <video controls playsinline preload="none" poster="../images/v2/case-studies/ai-ugc-video-engine/p3-poster.jpg" aria-label="Silicone grease video, 10 seconds, no sound">
+              <source src="../images/v2/case-studies/ai-ugc-video-engine/p3.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+              <h3>"Vaseline is why this faucet sticks"</h3>
+              <p>9:16 for TikTok and Reels, 10 seconds. Featured product: Moen 140676 Silicone Lubricant.</p>
+              <p>Source, Moen: "Petroleum-based lubricants may react with the rubber seals".</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The brief</h2>
+          <p>PlumbersStock sells plumbing and HVAC parts to professionals and homeowners. The goal was brand awareness through daily short videos. The catch is the audience: plumbers spot a wrong detail straight away, and a video that gets the plumbing wrong hurts the brand it's meant to build.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>Problem first, never a product showcase</h3>
+            <p>Each video starts from a real customer problem and ends on the verified fix. The product only appears at the end.</p>
+          </li>
+          <li class="service">
+            <h3>Every claim needs a source</h3>
+            <p>A topic stays only if a manufacturer page, code or standard backs it. I quote the exact sentence each on-screen line rests on.</p>
+          </li>
+          <li class="service">
+            <h3>A person approves before video spend</h3>
+            <p>A still costs about half a cent and a clip costs $0.28, so nothing gets animated until someone has checked the image.</p>
+          </li>
+          <li class="service">
+            <h3>Nothing posts on its own</h3>
+            <p>Social posting stays switched off until a batch passes review by a plumbing expert and the marketing team.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How the pipeline works</h2>
+          <p>Six steps, in order. The cheap checks come first, so mistakes get caught before they cost anything.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Start from problems customers already have</h3>
+            <p class="role-text">I went through the 218 how-to guides on the PlumbersStock site. About 127 were usable and about 38 made the top tier, split into a pro track for YouTube and a DIY track for TikTok and Reels.</p>
+          </li>
+          <li class="role">
+            <h3>Check every claim against a primary page</h3>
+            <p class="role-text">One claim failed. The draft said petroleum grease swells nitrile rubber and fails within 6 to 12 months, and no source backed that. Moen says petroleum-based lubricants "may react with the rubber seals", so that's what the video now says.</p>
+          </li>
+          <li class="role">
+            <h3>Price every request before sending it</h3>
+            <p class="role-text">The generator gets an exact price from Higgsfield's free estimate call and refuses anything above $2. Pricing 20 video models this way led to Kling 3.0 Pro at $0.28 per 5-second clip on the client's discounted rate, against about $5.70 for Seedance 2.5, the model first planned for the DIY track.</p>
+            <p class="role-tools">Node.js, Higgsfield API, Kling 3.0 Pro</p>
+          </li>
+          <li class="role">
+            <h3>Generate stills and approve them by eye</h3>
+            <p class="role-text">76 stills in 19 batches became 6 approved images. Most fixes came from naming the exact detail the model got wrong.</p>
+            <p class="role-tools">Soul V2</p>
+          </li>
+          <li class="role">
+            <h3>Animate, then judge frame by frame</h3>
+            <p class="role-text">It took 10 clips to fill 6 segments, and 4 of the 6 first tries were usable. I review each clip as a sheet of frames, especially the last second, where AI video tends to fall apart.</p>
+            <p class="role-tools">Kling 3.0 Pro, ffmpeg</p>
+          </li>
+          <li class="role">
+            <h3>Build each video from a short recipe</h3>
+            <p class="role-text">A small file lists a video's segments, timing and on-screen text, and one command builds the finished MP4 at the right size. That's what lets this grow past three videos without manual editing.</p>
+            <p class="role-tools">Claude Code, Node.js, ffmpeg</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What the review caught</h2>
+          <p>First tries usually had a detail a plumber would catch. These are real rejects next to what made it into the final videos.</p>
+        </div>
+        <ul class="compare-list">
+          <li class="compare">
+            <div class="compare-shots is-wide">
+              <figure><img src="../images/v2/case-studies/ai-ugc-video-engine/soda-can-rejected.jpg" alt="AI image with a soda can on the bench, a fingerless glove and primer on bare fingers" loading="lazy"><figcaption>Rejected</figcaption></figure>
+              <figure class="is-kept"><img src="../images/v2/case-studies/ai-ugc-video-engine/soda-can-kept.jpg" alt="AI image with matching black gloves, a primed PVC pipe, a coupling and a primer can with its dauber" loading="lazy"><figcaption>Kept</figcaption></figure>
+            </div>
+            <h3>A soda can instead of primer</h3>
+            <p>The first batch had a soda can on the bench, mismatched gloves and primer on bare fingers. Describing the can, the dauber and matching gloves fixed it.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-wide">
+              <figure><img src="../images/v2/case-studies/ai-ugc-video-engine/brush-rejected.jpg" alt="Video frame where the dauber has turned into a brush and blue cement sits on the pipe as a blob" loading="lazy"><figcaption>Rejected</figcaption></figure>
+              <figure class="is-kept"><img src="../images/v2/case-studies/ai-ugc-video-engine/brush-kept.jpg" alt="Video frame of gloved hands pressing the primed pipe into the coupling" loading="lazy"><figcaption>Kept</figcaption></figure>
+            </div>
+            <h3>A dauber that became a brush</h3>
+            <p>In this clip the applicator changed shape and the cement went on as a blob. The kept clip is a clean join, but it shows no cement, which is the pilot's main flaw.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-tall">
+              <figure><img src="../images/v2/case-studies/ai-ugc-video-engine/smooth-rod-rejected.jpg" alt="AI image of tape wrapped around a smooth rod above bare threads" loading="lazy"><figcaption>Rejected</figcaption></figure>
+              <figure class="is-kept"><img src="../images/v2/case-studies/ai-ugc-video-engine/smooth-rod-kept.jpg" alt="AI image of shredded PTFE tape bunched at the threads of a brass fitting" loading="lazy"><figcaption>Kept</figcaption></figure>
+            </div>
+            <h3>Tape on a smooth rod</h3>
+            <p>The model wrapped tape along a smooth rod and left the threads bare, which is not where tape goes. Asking for tape on the threads only fixed it.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-tall">
+              <figure><img src="../images/v2/case-studies/ai-ugc-video-engine/gel-nail-rejected.jpg" alt="AI image of a manicured fingernail with a glob of gel on a ribbed part" loading="lazy"><figcaption>Rejected</figcaption></figure>
+              <figure class="is-kept"><img src="../images/v2/case-studies/ai-ugc-video-engine/gel-nail-kept.jpg" alt="AI image of a short trimmed fingertip touching a seated O-ring on a brass cartridge" loading="lazy"><figcaption>Kept</figcaption></figure>
+            </div>
+            <h3>A manicure dripping gel</h3>
+            <p>Silicone grease came out as a glob on a manicured nail. Asking for a short trimmed nail and a thin film fixed it, and the O-ring stayed in its seat.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>These are pilot videos for client review, not published ads, so there are no reach or engagement numbers yet. Here is what the pilot did prove.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>3 finished videos: one 16:9 and two 9:16.</li>
+              <li>$3.23 total AI cost, failed tries included: 19 still batches and 10 clips.</li>
+              <li>1 unsupported claim caught and rewritten before anything was generated.</li>
+              <li>A generator and editor with 10 of 10 automated tests passing.</li>
+              <li>A prompt log of every try, with what went wrong and what fixed it.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What the model couldn't do</h3>
+            <ul>
+              <li>Show the cement step. In 3 tries it never did, so the glue video shows the join without blue cement. A plumber will spot that.</li>
+              <li>Show a full tape wrap. The best of 3 tries shows one clockwise stroke, not full wraps.</li>
+              <li>Hold the shape of small tools. The dauber kept turning into a brush or a disc.</li>
+            </ul>
+            <p class="case-held">It did hold the purple primer, the blue tape spool, a thin clear grease film and the seated O-ring, with no extra fingers in any clip.</p>
+          </div>
+        </div>
+        <p class="case-takeaway">That's the job of a pilot: it shows which shots AI can carry and which to film, before anyone pays for 60 videos.</p>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="under-the-hood">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Under the hood</h2>
+        </div>
+        <div class="case-shots">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/ai-ugc-video-engine/tests.png" alt="Terminal output showing 10 automated tests passing and none failing" width="1316" height="340" loading="lazy">
+            <figcaption>The tests cover video size and format, price estimates, refusing models with no fixed price, error handling, and uploads that never expose the API key.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/ai-ugc-video-engine/n8n-workflow.png" alt="n8n workflow running from a daily trigger through video generation and Drive upload, with three social posting nodes marked off" width="1470" height="355" loading="lazy">
+            <figcaption>The next phase: an n8n workflow that takes topics from a Google Sheet, generates the video and saves it to Drive. It's switched off for now, its social posting nodes stay disabled until batches pass review, and it needs rewiring to the current API before it runs.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Want AI output you can trust?</h2>
+          <p>I build pipelines with the review steps built in, so mistakes get caught before they cost you. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>
