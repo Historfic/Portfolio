@@ -695,6 +695,21 @@ a { color: inherit; }
 /* Before and after stacked beside a phone screenshot */
 .case-redesign { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 32px; align-items: start; }
 
+/* Workflow diagram: keeps a readable size and scrolls sideways on small screens */
+.case-workflow { margin: 0 0 clamp(36px, 5vw, 56px); }
+.case-workflow-scroll { overflow-x: auto; border: 1px solid var(--line-dark); border-radius: 14px; }
+.case-workflow-scroll svg { display: block; width: 100%; min-width: 960px; height: auto; }
+.case-workflow-hint { display: none; margin: 10px 0 0; color: var(--blue-soft); font-size: 0.88rem; font-weight: 600; }
+.case-workflow figcaption { margin-top: 10px; max-width: 72ch; color: var(--mist); font-size: 0.92rem; }
+.wf-line path { fill: none; stroke: rgba(169, 200, 255, 0.35); stroke-width: 2; }
+.wf-branch { fill: var(--blue-soft); font-family: var(--font-body); font-size: 13px; font-weight: 600; }
+.wf-node rect { fill: var(--navy-800); stroke: rgba(169, 200, 255, 0.3); stroke-width: 1.5; }
+.wf-node use { fill: none; stroke: var(--blue-soft); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.wf-node text { fill: #d4def0; font-family: var(--font-body); font-size: 14px; font-weight: 500; text-anchor: middle; }
+.wf-node.is-outlined rect { stroke: var(--blue); stroke-width: 2.5; }
+.wf-node.is-filled rect { fill: var(--blue); stroke: var(--blue); }
+.wf-node.is-filled use { stroke: #fff; }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1000px) {
@@ -702,6 +717,7 @@ a { color: inherit; }
   .plans { grid-template-columns: 1fr; max-width: 560px; }
   .case-videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-video.is-wide { grid-column: 1 / -1; }
+  .case-workflow-hint { display: block; }
 }
 
 @media (max-width: 860px) {

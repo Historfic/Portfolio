@@ -120,8 +120,51 @@
       <div class="wrap">
         <div class="section-head">
           <h2>How the pipeline works</h2>
-          <p>Six steps, from pressing the button to a scored lead on screen.</p>
+          <p>Six steps, from pressing the button to a scored lead on screen. The middle four run in this n8n workflow.</p>
         </div>
+        <figure class="case-workflow">
+          <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="n8n workflow diagram, scrolls sideways on small screens">
+            <svg viewBox="0 0 1160 324" role="img" aria-labelledby="wf-title wf-desc">
+              <title id="wf-title">n8n workflow: Arbitrage Sourcing Pipeline</title>
+              <desc id="wf-desc">A dashboard webhook or a manual run starts Run config, then Scrape supplier catalog, then Has UPCs. If yes, Keepa product lookup runs before Arbitrage sanitizer. If no, the workflow goes straight to Arbitrage sanitizer. Then Upsert leads to Supabase, Finalize run log and Log run to Supabase.</desc>
+              <defs>
+                <symbol id="wf-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+                <symbol id="wf-cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6 2-2 6z"/></symbol>
+                <symbol id="wf-code" viewBox="0 0 24 24"><path d="M9 4C6 4 6 6 6 8s-2 4-2 4 2 0 2 4 0 4 3 4M15 4c3 0 3 2 3 4s2 4 2 4-2 0-2 4 0 4-3 4"/></symbol>
+                <symbol id="wf-if" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/></symbol>
+                <symbol id="wf-http" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+              </defs>
+
+              <g class="wf-line">
+                <path d="M92 44C128 44 129 150 165 150"/>
+                <path d="M92 256C128 256 129 150 165 150"/>
+                <path d="M221 150H294"/>
+                <path d="M350 150H423"/>
+                <path d="M479 150C515 150 516 44 552 44"/>
+                <path d="M608 44C644 44 645 150 681 150"/>
+                <path d="M479 150H681"/>
+                <path d="M737 150H810"/>
+                <path d="M866 150H939"/>
+                <path d="M995 150H1068"/>
+              </g>
+              <text class="wf-branch" x="498" y="88" text-anchor="end">yes</text>
+              <text class="wf-branch" x="580" y="170" text-anchor="middle">no</text>
+
+              <g class="wf-node"><rect x="36" y="16" width="56" height="56" rx="12"/><use href="#wf-bolt" x="52" y="32" width="24" height="24"/><text x="64" y="94">Dashboard</text><text x="64" y="112">webhook</text></g>
+              <g class="wf-node"><rect x="36" y="228" width="56" height="56" rx="12"/><use href="#wf-cursor" x="52" y="244" width="24" height="24"/><text x="64" y="306">Manual run</text></g>
+              <g class="wf-node"><rect x="165" y="122" width="56" height="56" rx="12"/><use href="#wf-code" x="181" y="138" width="24" height="24"/><text x="193" y="200">Run config</text></g>
+              <g class="wf-node"><rect x="294" y="122" width="56" height="56" rx="12"/><use href="#wf-code" x="310" y="138" width="24" height="24"/><text x="322" y="200">Scrape supplier</text><text x="322" y="218">catalog</text></g>
+              <g class="wf-node"><rect x="423" y="122" width="56" height="56" rx="12"/><use href="#wf-if" x="439" y="138" width="24" height="24"/><text x="451" y="200">Has UPCs?</text></g>
+              <g class="wf-node is-outlined"><rect x="552" y="16" width="56" height="56" rx="12"/><use href="#wf-http" x="568" y="32" width="24" height="24"/><text x="580" y="94">Keepa product</text><text x="580" y="112">lookup</text></g>
+              <g class="wf-node is-filled"><rect x="681" y="122" width="56" height="56" rx="12"/><use href="#wf-code" x="697" y="138" width="24" height="24"/><text x="709" y="200">Arbitrage</text><text x="709" y="218">sanitizer</text></g>
+              <g class="wf-node"><rect x="810" y="122" width="56" height="56" rx="12"/><use href="#wf-http" x="826" y="138" width="24" height="24"/><text x="838" y="200">Upsert leads</text><text x="838" y="218">to Supabase</text></g>
+              <g class="wf-node"><rect x="939" y="122" width="56" height="56" rx="12"/><use href="#wf-code" x="955" y="138" width="24" height="24"/><text x="967" y="200">Finalize</text><text x="967" y="218">run log</text></g>
+              <g class="wf-node"><rect x="1068" y="122" width="56" height="56" rx="12"/><use href="#wf-http" x="1084" y="138" width="24" height="24"/><text x="1096" y="200">Log run</text><text x="1096" y="218">to Supabase</text></g>
+            </svg>
+          </div>
+          <p class="case-workflow-hint">Swipe sideways to see the whole workflow.</p>
+          <figcaption>Drawn from the workflow's source file. The highlighted step is where fees, ROI and the stale check happen. If a category returns no UPCs, Keepa is skipped and the run is still logged. The code lives in the project's repo and deploys to n8n by script, so the logic that runs is the logic the tests cover.</figcaption>
+        </figure>
         <ol class="timeline">
           <li class="role">
             <h3>Start a run from the dashboard</h3>
