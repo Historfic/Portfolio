@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernlight Advice income protection: case study | Rafael Bashan</title>
+  <meta name="description" content="How I built AI voice agents that call income protection leads in about 96 seconds, offer a live adviser, and stop when asked. A real system under a stand-in name.">
+  <meta property="og:title" content="AI calls that put leads through to a real adviser | Rafael Bashan">
+  <meta property="og:description" content="A case study: AI voice agents that phone income protection leads, ring every adviser at once, and fall back to a booking or a text.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/fernlight-advice-income-protection/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: Fernlight Advice income protection</p>
+          <h1>AI calls that put leads through to a real adviser</h1>
+          <p class="hero-intro">People filled in Fernlight Advice's income protection quiz, then left without booking. I built the voice agents and workflows that phone them about 96 seconds later, offer a live adviser, and fall back to a booking or a text if they'd rather not.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#call">Try the call</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>seconds from form to first call</dt><dd>~96</dd></div>
+            <div><dt>do-not-contact checks</dt><dd>16</dd></div>
+            <div><dt>transfer test chats passed</dt><dd>98 of 98</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="Example: how an income protection lead reaches an adviser">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Enquiry at 10:02 am</b><span>Income protection, no time booked</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>AI calls about 96 seconds later</b><span>Says it's an AI and that the call may be recorded</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Adviser on the line</b><span>First adviser to press 1 takes the call</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="call">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Try the call</h2>
+          <p>Real recordings are real people's calls, so I can't share them. This follows the live script with the names changed. Choose what the lead says and see where each answer goes.</p>
+        </div>
+        <div class="call-demo" id="call-demo" hidden>
+          <div class="call-panel">
+            <ol class="call-log" id="call-log" aria-live="polite"></ol>
+            <div class="call-choices">
+              <p class="call-prompt" id="call-prompt"></p>
+              <div class="call-options" id="call-options"></div>
+            </div>
+          </div>
+          <div class="call-panel">
+            <h3>Behind the call</h3>
+            <ul class="call-events" id="call-events"></ul>
+          </div>
+        </div>
+        <noscript>
+          <ol class="timeline">
+            <li class="role"><h3>The AI says who it is</h3><p class="role-text">It says it's an AI and that the call may be recorded, then checks it has the right person.</p></li>
+            <li class="role"><h3>It offers an adviser now</h3><p class="role-text">Every adviser rings at once, and the first to press 1 takes the call.</p></li>
+            <li class="role"><h3>A no gets a booking, then a text</h3><p class="role-text">It offers a video appointment, then a text with a booking link, then ends the call politely.</p></li>
+            <li class="role"><h3>Stop means stop</h3><p class="role-text">If someone asks not to be contacted, the number goes on the do-not-contact list straight away.</p></li>
+          </ol>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="case-brief-head">
+          <div class="section-head">
+            <h2>The brief</h2>
+            <p>Fernlight Advice is a stand-in name for a real New Zealand advice firm, and I've left out its name, its people and its lead numbers. People were completing its insurance quiz and leaving without booking. The firm wanted them phoned quickly and put through to a local adviser. The same system also runs its home-loan line, so some of the testing below ran there.</p>
+            <p>I owned the voice agents, the n8n workflows and the transfer backend, working from the agency's briefs and building with Claude Code. A colleague built the first landing pages and CRM, and I extended both.</p>
+          </div>
+          <figure class="case-demo">
+            <img src="../images/v2/landing/fernlight-advice-income-protection.jpg" alt="Fernlight Advice demo page with a six-question income protection price check beside a chart of income over a year" width="800" height="500" loading="lazy">
+            <figcaption>The <a href="https://historfic.github.io/fernlight-advice-income-protection/" target="_blank" rel="noopener">income protection price check</a>, a demo of the kind of form that feeds this system. It sends nothing, and its figures are made up.</figcaption>
+          </figure>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>Reach people who didn't book</h3>
+            <p>Someone who fills in a quiz and leaves has still asked for help, so the AI phones while the enquiry is fresh.</p>
+          </li>
+          <li class="service">
+            <h3>A real adviser is the goal</h3>
+            <p>The call exists to get the lead talking to an adviser, free of charge. It's kept short and never turns into an interview.</p>
+          </li>
+          <li class="service">
+            <h3>No advice from the AI</h3>
+            <p>It can't quote premiums, recommend a policy, or say whether someone would be accepted. Those questions go to an adviser.</p>
+          </li>
+          <li class="service">
+            <h3>Stop means stop</h3>
+            <p>An opt-out takes effect during the call, and every later campaign call and text checks the list first.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How a lead moves through the system</h2>
+          <p>Six steps, in order. Each one decides whether the next is allowed to happen.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Take the enquiry and leave time to book</h3>
+            <p class="role-text">The form saves the lead and hands it to n8n. Inside calling hours, Monday to Saturday from 8:30 am to 8 pm, the system waits 90 seconds so nobody gets called while they're still booking online. Outside those hours, the lead gets a text and a call when the window opens.</p>
+            <p class="role-tools">Next.js, n8n, Supabase, TNZ</p>
+          </li>
+          <li class="role">
+            <h3>Check the list before every contact</h3>
+            <p class="role-text">Before each campaign call or text, n8n asks the CRM whether the number is on the do-not-contact list. Follow-up calls also check that the lead is still new, so anyone who has booked stops getting them.</p>
+            <p class="role-tools">n8n, Next.js API routes</p>
+          </li>
+          <li class="role">
+            <h3>Keep the call short and honest</h3>
+            <p class="role-text">The AI says what it is, checks it has the right person and names the enquiry. It answers from its knowledge file and nothing else. If someone mentions a health condition, it acknowledges that once, asks nothing further and saves no medical detail.</p>
+            <p class="role-tools">Retell, originally VAPI</p>
+          </li>
+          <li class="role">
+            <h3>Ring every adviser at once</h3>
+            <p class="role-text">Inside adviser hours, Monday to Friday from 8:30 am to 5 pm, the AI offers a free adviser now. Every adviser on the team rings together, and the first to press 1 wins. The other phones stop and the caller joins the winner on a conference call. Self-employed leads go straight to the business cover specialist instead, connected on answer.</p>
+            <p class="role-tools">Twilio, n8n, Postgres</p>
+          </li>
+          <li class="role">
+            <h3>Fall back without losing the lead</h3>
+            <p class="role-text">A no to the transfer gets an offer of a video appointment, then a text with a booking link. Bookings land on the right team calendar for personal or business cover. A voicemail starts a follow-up ladder of up to 5 calls over several days, and each call checks the lead again first.</p>
+            <p class="role-tools">Cal.com, n8n, TNZ</p>
+          </li>
+          <li class="role">
+            <h3>Show the team where each lead came from</h3>
+            <p class="role-text">The ad name had been stored all along, but the CRM only showed the campaign. Each lead page now opens on the campaign name, followed by the ad set, the ad and the enquiry, with the tracking details one click down.</p>
+            <p class="role-tools">Next.js, Supabase, Meta Pixel and Conversions API</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What broke, and what fixed it</h2>
+          <p>This system runs on real leads, so the failures were real too. These four taught me the most, and none of them showed up as a failed run.</p>
+        </div>
+        <ul class="compare-list">
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>windowStartHour: 8,
+windowEndHour: 5,
+
+f.hour &gt;= 8 &amp;&amp; f.hour &lt; 5
+// false at every hour</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>windowStart: '08:30',
+windowEnd:   '20:00',
+
+const m = f.hour*60 + f.minute
+m &gt;= START &amp;&amp; m &lt; END</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A calling window that could never open</h3>
+            <p>An edit set the closing hour to 5, meaning 5 pm, on a 24-hour clock. No hour passes that test, so every lead got a "we'll call during business hours" text and no call. A later edit to 8.5 and 5.5 made it worse, and JavaScript dropped the half hour without an error. Times are now "HH:MM" strings, so a bare 5 can't be written.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>HTTP 400
+Couldn't get tool for hook
+
+onError: continueRegularOutput
+n8n run status: success</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>onError: continueErrorOutput
+on failure: Dial Failed alert</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A failed dial that reported success</h3>
+            <p>A deleted tool was still on the agent's list, so the voice platform refused the call. n8n kept going and marked the run green, so nobody was told. It came back when an old version of the agent was saved over my repair, hitting 8 test dials and no real lead. I repaired the list by script, and every failed dial now sends an alert.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>AI: "Please hold while
+I connect you..."
+
+tools called: none</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>Never say "please hold"
+unless that same reply
+calls the transfer tool.</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>"Please hold" with nothing behind it</h3>
+            <p>A test on the home-loan agent, which shares this flow, made 29 of 30 transfers. In the miss, it promised a transfer and never called the tool, which on a real call means silence. It also said advisers were available when the window was only open. New prompt rules fixed both, and the final live run passed 98 of 98.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>// new lead source sent
+call_attempt: '1st_call'
+
+// follow-ups looked for
+call_attempt === '1st_callback'</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>call_attempt: '1st_callback'
+
+voicemail: text and email sent
+second call: 20 minutes later</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>One word lost in a platform move</h3>
+            <p>After the switch to Retell, a first call that reached voicemail got no follow-up, because the new workflow sent a value the old logic wasn't looking for. A check of the whole system caught it the same day. Two home-loan leads were affected. I fixed the value and re-ran just their follow-ups from a temporary copy, which I then deleted.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>These are engineering results, read from the live system's logs and tests. I can't publish the firm's lead numbers, and I haven't measured conversion before and after, so I'm not claiming an uplift.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>95 to 96 seconds from form to first dial in the 6 latest in-hours runs on this line, read 1 November 2026. That includes the 90-second wait.</li>
+              <li>16 do-not-contact checks across 4 live workflows, one in front of each campaign call and text.</li>
+              <li>98 of 98 test chats correct on when to transfer: 30 of 30 transfers when the window was open and the caller wanted an adviser, 0 in 56 closed-window chats.</li>
+              <li>Both product lines moved from VAPI to Retell in one scripted switch with a rollback, on 29 October 2026. The first real leads afterwards were dialled with nobody stepping in.</li>
+              <li>38 new tracking columns across leads and nurture contacts, with the campaign name first on each lead page.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Where it stops</h3>
+            <ul>
+              <li>The 98-chat test ran by text, on the home-loan agent, before the move to Retell. It hasn't been repeated on Retell.</li>
+              <li>The do-not-contact check in n8n fails open. If the CRM is down, outreach carries on, so a number on the list could be reached during an outage. That's a deliberate trade, written into the change record.</li>
+              <li>Ad tracking depends on the ad accounts. Meta ad IDs and Google click data only fill in once those platforms pass them, and that setup was still open in late October.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="case-takeaway">Getting an AI to talk is the easy part. The work is deciding when it may call, who picks up, and what happens when a step fails.</p>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="under-the-hood">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Under the hood</h2>
+        </div>
+        <div class="case-shots">
+          <figure class="case-shot">
+            <div class="case-table-wrap" tabindex="0" role="region" aria-label="Calling window test results">
+              <table class="case-table">
+                <thead>
+                  <tr><th scope="col">Lead arrives (NZ time)</th><th scope="col">Result</th><th scope="col">Next call slot</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Thu 18 Sep, 07:00</td><td>Waits</td><td>Same day, 08:30</td></tr>
+                  <tr><td>Thu 18 Sep, 08:29</td><td>Waits</td><td>Same day, 08:30</td></tr>
+                  <tr><td>Thu 18 Sep, 08:30</td><td class="is-now">Calls now</td><td>Now</td></tr>
+                  <tr><td>Thu 18 Sep, 12:00</td><td class="is-now">Calls now</td><td>Now</td></tr>
+                  <tr><td>Thu 18 Sep, 19:59</td><td class="is-now">Calls now</td><td>Now</td></tr>
+                  <tr><td>Thu 18 Sep, 20:00</td><td>Waits</td><td>Fri 19 Sep, 08:30</td></tr>
+                  <tr><td>Thu 18 Sep, 23:00</td><td>Waits</td><td>Fri 19 Sep, 08:30</td></tr>
+                  <tr><td>Sat 19 Sep, 10:00</td><td class="is-now">Calls now</td><td>Now</td></tr>
+                  <tr><td>Sun 20 Sep, 10:00</td><td>Waits</td><td>Mon 21 Sep, 08:30</td></tr>
+                  <tr><td>Sat 26 Sep, 20:30</td><td>Waits</td><td>Mon 28 Sep, 08:30, across the daylight saving change</td></tr>
+                  <tr><td>Fri 25 Dec, 10:00</td><td>Waits</td><td>Mon 28 Dec, 08:30, skipping the holiday</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>The calling window test, run on 1 November 2026 against the code live that day. All 11 cases passed, including both edges of the window, daylight saving and holidays.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/fernlight-advice-income-protection/lead-workflow.png" alt="Workflow diagram: a lead arrives, is enriched and logged, then either waits 90 seconds and passes a callable check and a do-not-contact check before the AI call, or passes an AI allowed check and a do-not-contact check before a text, then waits for the call window" width="3036" height="712" loading="lazy">
+            <figcaption>The lead source workflow, drawn from the live n8n file with its settings removed and labels tidied. Inside calling hours, the lead waits 90 seconds and passes two checks before the AI calls. Outside them, it gets a text and joins the same path when the window opens. The do-not-contact checks are in blue.</figcaption>
+          </figure>
+          <div class="case-pair">
+            <figure class="case-shot">
+              <pre class="case-code" tabindex="0"><code>UPDATE transfers
+SET winner_adviser_id = :adviser_id,
+    status = 'accepted',
+    accepted_at = NOW()
+WHERE transfer_id = :transfer_id
+  AND winner_adviser_id IS NULL
+  AND status = 'pending'
+  AND expires_at &gt; NOW()
+RETURNING transfer_id, winner_adviser_id;</code></pre>
+              <figcaption>The winner lock, simplified from the build spec. Two advisers can press 1 at almost the same moment. This is one atomic update, so exactly one gets a row back. Selecting first and updating afterwards could let both win.</figcaption>
+            </figure>
+            <figure class="case-shot">
+              <div class="lead-card">
+                <h3>Where this lead came from</h3>
+                <p class="lead-card-campaign">Income protection, self-employed</p>
+                <p class="lead-card-channel">Meta, campaign ID 1200000000</p>
+                <dl>
+                  <div><dt>Ad set</dt><dd>Trades, 30 to 55</dd></div>
+                  <div><dt>Ad</dt><dd>Keep the money coming, video 2</dd></div>
+                  <div><dt>Enquiry</dt><dd>Insurance, income protection</dd></div>
+                  <div><dt>Arrived</dt><dd>Tue 3 Nov, 10:02 am</dd></div>
+                </dl>
+                <details>
+                  <summary>Tracking details</summary>
+                  <dl>
+                    <div><dt>Landing page</dt><dd>fernlight.example/cover</dd></div>
+                    <div><dt>UTM source and medium</dt><dd>facebook, paid</dd></div>
+                    <div><dt>Click ID</dt><dd>fbclid: sample-0000</dd></div>
+                  </dl>
+                </details>
+              </div>
+              <figcaption>The lead page card, rebuilt here with sample data. The campaign comes first because that's what the team asked to see first. Empty rows hide themselves, so new fields appear as soon as the data exists.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Losing leads between the form and the phone?</h2>
+          <p>I build voice agents with the checks built in: when to call, who picks up and when to stop. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+  <script>
+    // The live call script as a click-through. Each step lists the AI's lines, what happens behind the call, and the replies.
+    const BOOK_OPTIONS = [["Tuesday morning", "slots"], ["I'd rather not book", "declined"]];
+    const PUT_THROUGH = "How about we put you through to one of them now?";
+    const OFFER_OPTIONS = [["Yes, put me through", "transfer"], ["Not right now", "booking"], ["I'm not interested", "notInterested"]];
+
+    const CALL = {
+      start: {
+        ai: ["Hi, I'm the AI assistant for Fernlight Advice. This call may be recorded for training purposes. Am I speaking with Sam?"],
+        events: ["The lead passed the still-callable and do-not-contact checks, so the call went out.", "Adviser hours are open, so a live transfer is on offer. After 5 pm, the AI offers a booking instead."],
+        options: [["Yes, that's me", "enquiry"], ["Wrong number", "wrong"], ["Don't call me again", "optOut"]],
+      },
+      enquiry: {
+        ai: ["I can see you enquired about income protection but didn't book a time, so I'm just following up. Was there anything you wanted to know before I connect you with one of our New Zealand-based advisers?"],
+        options: [["No, go ahead", "offer"], ["How much would it cost me?", "cost"], ["I've got a health condition. Can I still get cover?", "health"], ["I'm not interested", "notInterested"], ["Don't call me again", "optOut"]],
+      },
+      offer: {
+        ai: ["How about we put you through to one of our local advisers now? It's free advice."],
+        options: OFFER_OPTIONS,
+      },
+      cost: {
+        ai: ["That's a really good question, and the honest answer is it depends on your situation. That's exactly what our advisers can go through with you, and it's free. " + PUT_THROUGH],
+        events: ["Pricing is off limits. The AI can't quote premiums or say how much cover someone needs."],
+        options: OFFER_OPTIONS,
+      },
+      health: {
+        ai: ["I'm really sorry to hear that, and thank you for telling me. Every situation is different, so that's something our advisers can go through with you properly, including what options might be available. It's free to talk with them. " + PUT_THROUGH],
+        events: ["No follow-up questions about health, and no medical detail saved. The AI can't say whether someone would be accepted."],
+        options: OFFER_OPTIONS,
+      },
+      transfer: {
+        ai: ["Great, one second while I see who's available."],
+        events: ["Every adviser on the team rings at once, with a private prompt the caller never hears.", "A self-employed lead skips this. The business cover specialist is connected on answer, with no press 1."],
+        ask: "What happens next",
+        options: [["An adviser presses 1", "connected"], ["No adviser picks up", "noAdviser"]],
+      },
+      connected: {
+        events: ["The first press wins and the other phones stop ringing."],
+        done: "Caller and adviser are on a conference call.",
+        end: "Handed over to the adviser",
+      },
+      noAdviser: {
+        ai: ["I'm sorry, there was no one available. I'll book you in for a time that works for you. What time works for you for a video call?"],
+        options: BOOK_OPTIONS,
+      },
+      booking: {
+        ai: ["No problem. What time works for you for a video call with one of our advisers?"],
+        options: BOOK_OPTIONS,
+      },
+      slots: {
+        ai: ["Let me check the team's calendar for you.", "I've got Tuesday at 10:30 in the morning or Tuesday at 2:00 in the afternoon. Would either of those suit?"],
+        events: ["Open times come from Cal.com, and the AI offers two at most."],
+        options: [["10:30, please", "booked"], ["I'd rather not book", "declined"]],
+      },
+      booked: {
+        ai: ["Perfect. Just give me a moment and I'll book that in for you.", "You'll receive a video link shortly. Thanks Sam, have a great day."],
+        events: ["Follow-up calls stop now that the lead has booked."],
+        done: "Booked on the team's calendar.",
+      },
+      declined: {
+        ai: ["No problem. I'll send you a text link so you can book a time when it suits you. Thanks for your time."],
+        events: ["The booking link goes out by text and the call ends."],
+      },
+      notInterested: {
+        ai: ["No worries. What I can do is send you a text so you can book a time that suits you. Thanks very much. Goodbye."],
+        events: ["The booking link goes out by text. Not interested isn't treated as an opt-out."],
+      },
+      optOut: {
+        ai: ["Of course. I'll record that now."],
+        events: ["The number goes on the do-not-contact list, and every later call and text checks that list first."],
+      },
+      wrong: {
+        ai: ["Sorry about that. I won't take up any more of your time."],
+        events: ["The call ends, and no details of the enquiry are shared."],
+      },
+    };
+
+    function setupCallDemo() {
+      const log = document.getElementById("call-log");
+      const events = document.getElementById("call-events");
+      const options = document.getElementById("call-options");
+      const prompt = document.getElementById("call-prompt");
+
+      function addLine(who, text, isLead) {
+        const line = document.createElement("li");
+        line.className = isLead ? "call-line is-lead" : "call-line";
+        const name = document.createElement("span");
+        name.className = "call-who";
+        name.textContent = who;
+        const words = document.createElement("p");
+        words.textContent = text;
+        line.append(name, words);
+        log.append(line);
+      }
+
+      function addEvent(text, isDone) {
+        const item = document.createElement("li");
+        item.className = isDone ? "call-event is-done" : "call-event";
+        item.textContent = text;
+        events.append(item);
+      }
+
+      function addButton(label, onClick) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "filter";
+        button.textContent = label;
+        button.addEventListener("click", onClick);
+        options.append(button);
+      }
+
+      function show(id, moveFocus) {
+        const step = CALL[id];
+        (step.ai || []).forEach((text) => addLine("AI caller", text));
+        (step.events || []).forEach((text) => addEvent(text));
+        if (step.done) addEvent(step.done, true);
+
+        options.replaceChildren();
+        if (step.options) {
+          prompt.textContent = step.ask || "The lead says";
+          step.options.forEach(([label, next]) => addButton(label, () => {
+            if (!step.ask) addLine("Lead", label, true);
+            show(next, true);
+          }));
+        } else {
+          prompt.textContent = step.end || "Call ended";
+          addButton("Start the call again", restart);
+        }
+        if (moveFocus) options.firstElementChild.focus();
+      }
+
+      function restart() {
+        log.replaceChildren();
+        events.replaceChildren();
+        show("start", true);
+      }
+
+      document.getElementById("call-demo").hidden = false;
+      show("start", false);
+    }
+
+    setupCallDemo();
+  </script>
+</body>
+</html>

@@ -738,3 +738,96 @@ a { color: inherit; }
   .name-letter { animation: none; }
   .flow-step { animation: none; opacity: 1; transform: none; }
 }
+
+/* ---------- Case study: AI calls ---------- */
+
+.section-head p + p { margin-top: 12px; }
+
+.case-brief-head { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(28px, 4vw, 56px); align-items: start; margin-bottom: clamp(32px, 4vw, 52px); }
+.case-brief-head .section-head { margin-bottom: 0; }
+.case-demo { margin: 0; }
+.case-demo img { width: 100%; height: auto; border: 1px solid var(--line-light); border-radius: 14px; }
+.case-demo figcaption { margin-top: 10px; color: var(--ink-soft); font-size: 0.92rem; }
+.case-demo figcaption a { color: var(--blue-strong); font-weight: 600; text-underline-offset: 3px; }
+
+/* The click-through call. Green stays reserved for a connected or booked outcome. */
+.call-demo { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.call-demo[hidden] { display: none; }
+.call-panel { padding: 24px; background: var(--navy-800); border: 1px solid var(--line-dark); border-radius: 18px; }
+.call-panel h3 { font-family: var(--font-display); font-size: var(--step-2); margin: 0 0 16px; }
+
+.call-log { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.call-line { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 12px; animation: call-in 0.25s ease-out; }
+.call-who { padding-top: 2px; color: var(--blue-soft); font-size: 0.85rem; font-weight: 600; }
+.call-line p { margin: 0; }
+.call-line.is-lead p { color: var(--mist); }
+
+.call-choices { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line-dark); }
+.call-prompt { margin: 0 0 10px; color: var(--mist); font-size: var(--step--1); }
+.call-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.call-options .filter { text-align: left; }
+
+.call-events { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.call-event { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px; color: #d4def0; font-size: 0.92rem; line-height: 1.45; animation: call-in 0.25s ease-out; }
+.call-event::before { content: ""; width: 12px; height: 12px; margin-top: 4px; border: 2px solid var(--blue); border-radius: 50%; }
+.call-event.is-done { color: var(--green); font-weight: 600; }
+.call-event.is-done::before { background: var(--green); border-color: var(--green); }
+
+@keyframes call-in { from { opacity: 0; transform: translateY(4px); } }
+
+/* Before and after code, in place of the rejected and kept images */
+.compare-shots.is-code figure { display: flex; flex-direction: column; min-width: 0; }
+.compare-shots.is-code pre { flex: 1; }
+.compare-shots.is-code pre,
+.case-code {
+  margin: 0;
+  padding: 12px;
+  overflow-x: auto;
+  background: var(--navy-900);
+  color: #d4def0;
+  border-radius: 10px;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+/* minmax(0, ...) so a wide table or code block scrolls inside its own box, not the page */
+.case-shots { grid-template-columns: minmax(0, 1fr); }
+.case-pair > * { min-width: 0; }
+
+.case-table-wrap { overflow-x: auto; border: 1px solid var(--line-dark); border-radius: 14px; }
+.case-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.92rem; }
+.case-table th, .case-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line-dark); }
+.case-table th { color: var(--mist); font-weight: 600; }
+.case-table tbody tr:last-child td { border-bottom: 0; }
+.case-table td { color: var(--mist); }
+.case-table td:first-child, .case-table .is-now { color: var(--white); }
+.case-table .is-now { font-weight: 600; }
+
+.case-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.case-code { padding: 18px 20px; background: var(--navy-800); border: 1px solid var(--line-dark); border-radius: 14px; font-size: 0.85rem; }
+
+.lead-card { padding: 20px 22px; background: #fff; color: var(--ink); border-radius: 14px; }
+.lead-card h3 { margin: 0 0 12px; font-size: var(--step-0); font-weight: 600; }
+.lead-card-campaign { margin: 0; font-family: var(--font-display); font-size: var(--step-2); font-weight: 700; line-height: 1.2; }
+.lead-card-channel { margin: 4px 0 16px; color: var(--ink-soft); font-size: 0.88rem; }
+.lead-card dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; margin: 0; }
+.lead-card dt { color: var(--ink-soft); font-size: 0.82rem; }
+.lead-card dd { margin: 0; font-size: 0.95rem; font-weight: 600; overflow-wrap: anywhere; }
+.lead-card details { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line-light); }
+.lead-card summary { color: var(--blue-strong); font-weight: 600; font-size: 0.92rem; cursor: pointer; }
+.lead-card details dl { margin-top: 12px; }
+
+@media (max-width: 860px) {
+  .call-demo, .case-pair, .case-brief-head { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .compare-shots.is-code { grid-template-columns: 1fr; }
+  .call-panel { padding: 18px; }
+  .call-line { grid-template-columns: 1fr; gap: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .call-line, .call-event { animation: none; }
+}
