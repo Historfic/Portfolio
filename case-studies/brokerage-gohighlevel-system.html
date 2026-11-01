@@ -44,7 +44,7 @@
           <a class="back-link" href="../index.html#work">Back to selected work</a>
           <p class="hero-hello">Case study: a GoHighLevel system for real estate brokerages</p>
           <h1>A brokerage system, tested until it held</h1>
-          <p class="hero-intro">A US company sells a GoHighLevel system to real estate brokerages. A first version existed when I joined, but parts of it had never run. Using Claude Code, I tested each part with real runs, built what was missing, and installed it in a fresh account to see what broke. That install found 162 broken references that no screen shows.</p>
+          <p class="hero-intro">A US company sells a GoHighLevel system to real estate brokerages. A first version existed when I joined, but parts of it had never run. Using Claude Code, I tested it with real runs, built what was missing, and installed it in a fresh account to see what broke. That install found 162 broken references that no screen shows.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#system">See the system</a>
             <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
@@ -70,7 +70,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>The system, as built</h2>
-          <p>I drew these charts from the working system. The GoHighLevel accounts belong to the company, so there are no screens from them on this page, and every lead in my tests was made up.</p>
+          <p>I drew these charts from the working system. The screens further down come from the source account, cropped so they show no account details. Every lead in my tests was made up.</p>
         </div>
         <figure class="case-workflow case-flowmap">
           <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="Chart of how work enters the system, scrolls sideways on small screens">
@@ -351,8 +351,9 @@ hand-offs arrive</pre><figcaption>After</figcaption></figure>
               <li>The form screens in the final run. Test leads went in through the API with the exact fields the forms write, because I don't automate CAPTCHAs. A teammate's real submissions came before the repair.</li>
               <li>The 4-hour qualification timer in the final run. I started that step directly, and the timer had passed in the earlier source-account test.</li>
               <li>The importer on an empty account. I tested it in one that already had the assets, so creating the property object from nothing has never run.</li>
+              <li>The nurture tracks at full length. On the fresh install I moved a deal in and out. The first message isn't due until day 30, so none went out.</li>
             </ul>
-            <p class="case-held">Installing it for a brokerage is still a manual job from a runbook, and this version has no AI in it.</p>
+            <p class="case-held">Installing it for a brokerage is still a manual job from a runbook, and this version has no AI in it. One property workflow has also never run, because a later fix replaced it, and it still needs retiring.</p>
           </div>
         </div>
         <p class="case-takeaway">A clean install can still be broken. Running it is how I found out.</p>
@@ -387,7 +388,22 @@ hand-offs arrive</pre><figcaption>After</figcaption></figure>
           <p class="case-workflow-hint">Swipe sideways to see the whole chart.</p>
           <figcaption>One of the five record workflows, drawn from its exported file. An accepted offer only reaches contract with a verified decision, an accepted price and a contract date. Anything incomplete goes to the exception path, which tells the agent what's missing.</figcaption>
         </figure>
+        <figure class="case-workflow">
+          <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="Screen of the offer and contract workflow in the GoHighLevel builder, scrolls sideways on small screens">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/builder-offer.jpg" width="1186" height="672" alt="GoHighLevel builder: six offer status triggers feed one condition, which splits into contract ready, countered, return to market, offer review and exception, each with its own steps" loading="lazy">
+          </div>
+          <p class="case-workflow-hint">Swipe sideways to see the whole screen.</p>
+          <figcaption>The same workflow in the GoHighLevel builder, in the source account. Six offer statuses start it, and its five branches match the chart above.</figcaption>
+        </figure>
         <div class="case-shots is-screens">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/property-records.jpg" width="900" height="170" alt="Property list in GoHighLevel with three test records: one verified, one flagged as a possible duplicate and needing review, one under contract with an accepted offer" loading="lazy">
+            <figcaption>Three of my test records, with made-up addresses: one verified, one flagged as a possible duplicate, and one under contract after an accepted offer. The cut-off headings are verification, duplicate, lifecycle and offer.</figcaption>
+          </figure>
+          <figure class="case-shot is-narrow">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/workflow-list.jpg" width="730" height="552" alt="GoHighLevel workflow list: seven property workflows, all published, with total enrolled counts of 36, 8, 2, 1, 0, 31 and 7" loading="lazy">
+            <figcaption>Seven of the property engine's ten workflows, in the source account. The counts are test runs, not live leads. The zero is the association controller, which has never run: a later fix writes the link directly, so nothing starts it.</figcaption>
+          </figure>
           <figure class="case-shot">
             <img src="../images/v2/case-studies/brokerage-gohighlevel-system/recount.jpg" width="900" height="526" alt="Terminal output: 69 workflows, 2,706 steps and 63 triggers in the source account; 74 tasks with no assignee, 74 notifications with no recipient and 14 misdirected hand-offs after the install; 0 of each after the repair; 65 workflows identical and 4 different" loading="lazy">
             <figcaption>I re-ran this count on the saved exports for this page. It reads local files only. The 4 workflows that differ are in the appointment engine, and were edited directly in the test account.</figcaption>

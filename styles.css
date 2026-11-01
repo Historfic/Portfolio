@@ -715,6 +715,9 @@ a { color: inherit; }
 .case-flowmap .wf-title { fill: #fff; font-weight: 700; }
 .case-flowmap .wf-node.is-filled rect { fill: var(--blue-strong); stroke: var(--blue-strong); }
 .case-flowmap .wf-node.is-filled text { fill: #fff; }
+/* A wide screen keeps a readable size too, and a narrow one doesn't stretch */
+.case-workflow-scroll img { display: block; width: 100%; min-width: 960px; height: auto; }
+.case-shot.is-narrow img { max-width: 640px; }
 
 /* ---------- Responsive ---------- */
 

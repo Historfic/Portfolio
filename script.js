@@ -16,7 +16,7 @@ const TOOLS = [
 
 // group = which filter the project sits under; cat = the label shown on the card
 const PROJECTS = [
-  { title: "Real estate brokerage system on GoHighLevel: 69 workflows tested end to end", cat: "CRM automation", group: "automation",
+  { title: "Real estate brokerage system on GoHighLevel: 69 workflows, tested on a fresh install", cat: "CRM automation", group: "automation",
     tools: "Claude Code, GoHighLevel, GoHighLevel API, Python",
     link: "case-studies/brokerage-gohighlevel-system.html", img: "images/v2/case-studies/brokerage-gohighlevel-system/thumb.jpg" },
   { title: "Email agency CRM: client pipeline, send calendar and private client links", cat: "Web app", group: "web",
