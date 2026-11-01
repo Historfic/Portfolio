@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email agency CRM: case study | Rafael Bashan</title>
+  <meta name="description" content="How I turned a CRM I wrote from scratch into a live system for an email marketing agency: one client pipeline, a send calendar and private client links.">
+  <meta property="og:title" content="An email agency CRM with a client view | Rafael Bashan">
+  <meta property="og:description" content="A case study: a custom CRM for an email marketing agency, what went wrong while building it, and what it still can't do.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/email-agency-crm/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: a custom CRM for an email marketing agency</p>
+          <h1>An email agency CRM with a client view</h1>
+          <p class="hero-intro">An email marketing agency with international clients needed one place for its pipeline, its send calendar and its team's to-dos, plus a way for clients to see their own emails without an account. I took a CRM I had written from scratch, gave the agency its own copy, and reshaped it around email work.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#screens">See the screens</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>team accounts</dt><dd>9</dd></div>
+            <div><dt>automated tests</dt><dd>222</dd></div>
+            <div><dt>days from copy to go-live</dt><dd>2</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="Example: how one email moves between the team and the client">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Email added to the calendar</b><span>Subject, preview text, send date and designs</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Client opens their private link</b><span>No sign-in, no tabs, only their own emails</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Client's update reaches the team</b><span>New status, urgency and a note, logged on the timeline</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The screens</h2>
+          <p>These are the real pages running on my machine with made-up demo data and a placeholder brand. The live CRM holds the agency's client records, so I didn't capture it.</p>
+        </div>
+        <div class="case-shots is-screens">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/calendar.jpg" width="900" height="700" alt="Demo data: a month calendar of emails and tasks coloured by urgency, with a To-Do list on the right grouped from urgent to low" loading="lazy">
+            <figcaption>The team calendar. Emails and tasks sit on their dates, coloured by urgency. The To-Do on the right lists everything still open, most urgent first, and each row opens the item. The Google Calendar card is a teaser with no function yet.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/client-link.jpg" width="900" height="640" alt="Demo data: the client's view, a month of their emails with one day open showing status and urgency menus and a note box" loading="lazy">
+            <figcaption>What a client sees through their private link: their own month of emails, with no tabs and no sign-in. They can set an email's status and urgency and leave a note for the team.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/clients-board.jpg" width="900" height="396" alt="Demo data: a Kanban board of clients across pipeline stages, with a Client Recap card on the right" loading="lazy">
+            <figcaption>One pipeline from New Lead to Completed/Repeat Client, or Lost. You drag a card or use its menu, which also works on a phone. The board scrolls sideways, so this view starts at the second stage. Client Recap is a placeholder for now.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/tasks-board.jpg" width="900" height="370" alt="Demo data: a Kanban board of team tasks across six stages from To Do to Done, each with an urgency badge" loading="lazy">
+            <figcaption>The team's task board has six stages, and this view is scrolled to the last four. Only Done counts as finished, so a late task sitting in For Review still shows as overdue.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The brief</h2>
+          <p>The agency runs email marketing for international clients. Its team needed to track clients, plan sends and share to-dos in one place, and its clients needed a simple way to see what was going out. The list kept growing after go-live, as the team started using it.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>One pipeline, two views</h3>
+            <p>Leads and deals became one list of clients, moving from New Lead to Completed/Repeat Client, or Lost. Kanban is the default, with a list view beside it.</p>
+          </li>
+          <li class="service">
+            <h3>A calendar for email, not social</h3>
+            <p>Each email carries a subject, preview text, platform, send date and designs, with four statuses: In Progress, Ready for Review, For Revision and Scheduled.</p>
+          </li>
+          <li class="service">
+            <h3>A client view without accounts</h3>
+            <p>Each client gets a private link to their own email calendar. They see only their emails, never notes, assignees, tasks or other clients.</p>
+          </li>
+          <li class="service">
+            <h3>Access by role</h3>
+            <p>There are three roles. Only the Owner opens Dashboard, Clients and Team. Everyone else works in Contacts, Calendar and Tasks.</p>
+          </li>
+          <li class="service">
+            <h3>Money in two currencies</h3>
+            <p>Client fees are in US dollars and expenses in pesos. The Owner sets the exchange rate, and peso figures stay hidden until they do, because I won't let the app guess a rate.</p>
+          </li>
+          <li class="service">
+            <h3>Sign-in people remember</h3>
+            <p>Everyone signs in with their name and a short PIN. No email is ever sent, and the Owner can reset a PIN on the Team page.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How I built it</h2>
+          <p>Six steps. The agency's copy went live on its second day, and 42 commits landed on it in the first four days.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Start from a CRM I wrote from scratch</h3>
+            <p class="role-text">I had already built a CRM with name and PIN sign-in, a team page, contacts and a content calendar. The agency got a separate copy with its own database and hosting, so the two share nothing.</p>
+            <p class="role-tools">Claude Code, Next.js, React, TypeScript, Tailwind CSS, Supabase, Vercel</p>
+          </li>
+          <li class="role">
+            <h3>Replace leads and deals with one pipeline</h3>
+            <p class="role-text">A migration moved everything onto one client record and dropped the two old tables. Every stage change is logged on that client's timeline, and the board and list both read from the same record.</p>
+            <p class="role-tools">Postgres migrations, drag and drop board</p>
+          </li>
+          <li class="role">
+            <h3>Rebuild the calendar for email</h3>
+            <p class="role-text">The calendar I started from was built for social posts. I changed it to email sends: subject, preview text, platforms such as Klaviyo, Mailchimp and HubSpot, email types, and up to 10 files per email.</p>
+          </li>
+          <li class="role">
+            <h3>Give each client a private link</h3>
+            <p class="role-text">A link is a long random token tied to one client. The database functions behind it return only client-safe fields, so notes and assignees never leave the database, and turning a link off stops it at once. When a client changes a status or urgency, or leaves a note, it lands on that client's timeline.</p>
+            <p class="role-tools">Postgres security definer functions</p>
+          </li>
+          <li class="role">
+            <h3>Enforce access in the database, not just the menu</h3>
+            <p class="role-text">Row level security and a database trigger back up what the menu shows. A Team Leader who tries to change someone's role gets nothing, even when calling the database directly, and a test checks exactly that. The last active Owner can't be demoted or switched off.</p>
+            <p class="role-tools">Supabase row level security, Vitest</p>
+          </li>
+          <li class="role">
+            <h3>Keep shipping what the team asks for</h3>
+            <p class="role-text">Once people were using it, requests came in as short messages: a Tasks tab, urgency colours, six task stages, a To-Do list beside the calendar, deleting team members, and a tour on first sign-in. I have no direct connection to the database, so each change goes out as a SQL file I run by hand, and the bigger ones get a dry run first.</p>
+            <p class="role-tools">Claude Code, PGlite for dry runs, Playwright</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What went wrong and what fixed it</h2>
+          <p>These are real failures from this build. Some got caught early, and some reached the live site first.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>A client link that looked empty</h3>
+            <p>One client's link showed almost nothing. The link was fine: the team had entered 14 tasks for that client and only one email, and links showed emails only. I added tasks to the link, then realised that was wrong, because clients should only ever see emails. I rolled it back, removed the database function so tasks couldn't be fetched directly, and put a note on the task form.</p>
+          </li>
+          <li class="service">
+            <h3>Short PINs the database refused</h3>
+            <p>The team already used short PINs, and Supabase rejected them with a weak password error, because its minimum is 6 characters. The server now turns each PIN into a long password using a keyed hash and a secret that stays on the server.</p>
+          </li>
+          <li class="service">
+            <h3>A migration that couldn't run</h3>
+            <p>Dropping the old deals table failed in my dry run, because leads and deals reference each other. Nothing had touched a real database yet. Dropping both tables in one statement fixed it.</p>
+          </li>
+          <li class="service">
+            <h3>A test that opened a dead link</h3>
+            <p>The client update test failed with "This link isn't active". The app was fine. The test clicked New link and read the box before the new link arrived, so it opened the old one just as it was cancelled. It now waits for the value to change.</p>
+          </li>
+          <li class="service">
+            <h3>Test data in front of the real team</h3>
+            <p>There's one database, so browser tests run against live data. A test client disappeared mid-run, most likely deleted by someone on the team, and a run I cut off left a test client and 4 test emails behind. I removed them, and I now run these tests rarely and in the background.</p>
+          </li>
+          <li class="service">
+            <h3>A change that broke the live site for a moment</h3>
+            <p>One database change removed a column the live site was still reading, so pages would show errors until the new code went out. I deployed straight after it. Where I can, I now make changes that only add, so order doesn't matter.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>The CRM is live and the agency's team has real work in it. I have no measured business results yet: no time saved, no revenue effect and no client feedback I can quote. Here is what I can show.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>A live CRM with 6 tabs, 3 roles and 9 team accounts.</li>
+              <li>11 clients in the pipeline and 25 tasks on the board when I first checked, all 25 added within one day.</li>
+              <li>A private calendar link per client, with status, urgency and notes flowing back to the team.</li>
+              <li>222 automated tests: 158 unit, 54 database access and 10 browser.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What it can't do yet</h3>
+            <ul>
+              <li>Google Calendar sync and Client Recap are placeholders with no function.</li>
+              <li>Pages are slower than they should be. The server code runs in Washington and the database in Sydney, so responses took about 0.7 to 1.6 seconds to start, and a first request after a quiet spell took 4.5. The fix is a one-line setting I haven't applied yet.</li>
+              <li>Emails and tasks look alike on the calendar, which may be part of why client work got entered as tasks. A clearer legend is still only an idea.</li>
+              <li>Browser tests still share the live database. A separate test database is on the list.</li>
+              <li>Short PINs are easy to remember, but they're weaker than real passwords.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="case-takeaway">The biggest miss wasn't a bug. I changed the client link before asking what a client should see.</p>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="under-the-hood">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Under the hood</h2>
+        </div>
+        <div class="case-shots is-screens">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/unit-tests.jpg" width="900" height="564" alt="Terminal output showing 22 unit test files and 158 unit tests passing" loading="lazy">
+            <figcaption>The unit tests cover the rules that have no database behind them, such as roles, PINs, urgency, task stages, the To-Do order and form validation. I reran these while writing this page.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/email-agency-crm/browser-tests.jpg" width="900" height="280" alt="Terminal output listing the 10 browser tests by name, from role access to the tour" loading="lazy">
+            <figcaption>The 10 browser tests walk through real flows. They write to the live database, so I listed them here without rerunning them. The same goes for the 54 database tests.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Need a CRM that fits how your team works?</h2>
+          <p>I build custom CRMs and internal tools, and I'll tell you what they can't do yet. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>

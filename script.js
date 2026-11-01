@@ -16,6 +16,9 @@ const TOOLS = [
 
 // group = which filter the project sits under; cat = the label shown on the card
 const PROJECTS = [
+  { title: "Email agency CRM: client pipeline, send calendar and private client links", cat: "Web app", group: "web",
+    tools: "Claude Code, Next.js, React, TypeScript, Tailwind CSS, Supabase (Postgres), Vercel, Vitest, Playwright",
+    link: "case-studies/email-agency-crm.html", img: "images/v2/case-studies/email-agency-crm/thumb.jpg" },
   { title: "AI UGC video engine: fact-checked plumbing videos for PlumbersStock", cat: "AI video", group: "automation",
     tools: "Claude Code, Node.js, Higgsfield API, Soul V2, Kling 3.0 Pro, ffmpeg, n8n",
     link: "case-studies/ai-ugc-video-engine.html", img: "images/v2/case-studies/ai-ugc-video-engine/thumb.jpg" },
