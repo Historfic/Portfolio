@@ -711,6 +711,10 @@ a { color: inherit; }
 .wf-node.is-outlined rect { stroke: var(--blue); stroke-width: 2.5; }
 .wf-node.is-filled rect { fill: var(--blue); stroke: var(--blue); }
 .wf-node.is-filled use { stroke: #fff; }
+/* Boxes that hold their own text, so the chart reads without icons */
+.case-flowmap .wf-title { fill: #fff; font-weight: 700; }
+.case-flowmap .wf-node.is-filled rect { fill: var(--blue-strong); stroke: var(--blue-strong); }
+.case-flowmap .wf-node.is-filled text { fill: #fff; }
 
 /* ---------- Responsive ---------- */
 

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brokerage GoHighLevel system: case study | Rafael Bashan</title>
+  <meta name="description" content="How I tested, finished and installed a 69-workflow GoHighLevel system for real estate brokerages, and the 162 broken references a clean install left behind.">
+  <meta property="og:title" content="A brokerage system, tested until it held | Rafael Bashan">
+  <meta property="og:description" content="A case study: a 69-workflow GoHighLevel system for real estate brokerages, what broke in testing and what fixed it. Test results only, with the limits included.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/brokerage-gohighlevel-system/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: a GoHighLevel system for real estate brokerages</p>
+          <h1>A brokerage system, tested until it held</h1>
+          <p class="hero-intro">A US company sells a GoHighLevel system to real estate brokerages. A first version existed when I joined, but parts of it had never run. Using Claude Code, I tested each part with real runs, built what was missing, and installed it in a fresh account to see what broke. That install found 162 broken references that no screen shows.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#system">See the system</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>workflows</dt><dd>69</dd></div>
+            <div><dt>automation steps</dt><dd>2,706</dd></div>
+            <div><dt>broken references found</dt><dd>162</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="Example: how an accepted offer moves through the system">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Agent records the accepted offer</b><span>Decision verified, price and contract date on the property</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>The property record checks it</b><span>Complete, so its status becomes under contract</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>The seller's deal follows</b><span>Under contract, with a closing task for the agent</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="system">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The system, as built</h2>
+          <p>I drew these charts from the working system. The GoHighLevel accounts belong to the company, so there are no screens from them on this page, and every lead in my tests was made up.</p>
+        </div>
+        <figure class="case-workflow case-flowmap">
+          <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="Chart of how work enters the system, scrolls sideways on small screens">
+            <svg viewBox="0 0 1160 664" role="img" aria-labelledby="wf-map-title wf-map-desc">
+              <title id="wf-map-title">How work enters the system</title>
+              <desc id="wf-map-desc">Six rows, each one way work enters: buyer form, seller form, general inquiry form, showing request form, an agent booking on a team calendar, and a deal moved to nurture. Each row passes through intake, then an engine, then shows up in a pipeline or deal stage. Four controllers run for every contact.</desc>
+              <text class="wf-branch" x="14" y="22" text-anchor="start">How it starts</text>
+              <text class="wf-branch" x="240" y="22" text-anchor="start">Intake</text>
+              <text class="wf-branch" x="548" y="22" text-anchor="start">What runs</text>
+              <text class="wf-branch" x="930" y="22" text-anchor="start">Where the team sees it</text>
+              <g class="wf-line"><path d="M204 74H240"/><path d="M512 74H548"/><path d="M894 74H930"/><path d="M204 158H240"/><path d="M512 158H548"/><path d="M894 158H930"/><path d="M204 242H240"/><path d="M512 242H548"/><path d="M894 242H930"/><path d="M204 326H240"/><path d="M512 326H548"/><path d="M894 326H930"/><path d="M204 410H240"/><path d="M512 410H548"/><path d="M894 410H930"/><path d="M204 494H240"/><path d="M512 494H548"/><path d="M894 494H930"/></g>
+              <g class="wf-node"><rect x="14" y="38" width="190" height="72" rx="12"/><text x="109" y="79">Buyer intake form</text></g>
+              <g class="wf-node"><rect x="240" y="38" width="272" height="72" rx="12"/><text x="376" y="70" class="wf-title">Service transition</text><text x="376" y="88">Routes by form, sets the role</text></g>
+              <g class="wf-node"><rect x="548" y="38" width="346" height="72" rx="12"/><text x="721" y="61" class="wf-title">Buyer engine</text><text x="721" y="79">First response, qualification, consultation,</text><text x="721" y="97">active search, closed lost</text></g>
+              <g class="wf-node"><rect x="930" y="38" width="216" height="72" rx="12"/><text x="1038" y="79">Buyer pipeline</text></g>
+              <g class="wf-node"><rect x="14" y="122" width="190" height="72" rx="12"/><text x="109" y="163">Seller intake form</text></g>
+              <g class="wf-node"><rect x="240" y="122" width="272" height="72" rx="12"/><text x="376" y="154" class="wf-title">Service transition</text><text x="376" y="172">Routes by form, sets the role</text></g>
+              <g class="wf-node"><rect x="548" y="122" width="346" height="72" rx="12"/><text x="721" y="145" class="wf-title">Seller and property engines</text><text x="721" y="163">Creates the property record. Listing, offers</text><text x="721" y="181">and contract run from that record</text></g>
+              <g class="wf-node"><rect x="930" y="122" width="216" height="72" rx="12"/><text x="1038" y="154">Seller pipeline</text><text x="1038" y="172">and the property record</text></g>
+              <g class="wf-node"><rect x="14" y="206" width="190" height="72" rx="12"/><text x="109" y="247">General inquiry form</text></g>
+              <g class="wf-node"><rect x="240" y="206" width="272" height="72" rx="12"/><text x="376" y="238" class="wf-title">Inquiry intake</text><text x="376" y="256">Deal, round robin, acknowledgement</text></g>
+              <g class="wf-node"><rect x="548" y="206" width="346" height="72" rx="12"/><text x="721" y="229" class="wf-title">Inquiry follow-up</text><text x="721" y="247">Day 1 and day 3 follow-ups,</text><text x="721" y="265">no response on day 6</text></g>
+              <g class="wf-node"><rect x="930" y="206" width="216" height="72" rx="12"/><text x="1038" y="247">General inquiry pipeline</text></g>
+              <g class="wf-node"><rect x="14" y="290" width="190" height="72" rx="12"/><text x="109" y="331">Showing request form</text></g>
+              <g class="wf-node"><rect x="240" y="290" width="272" height="72" rx="12"/><text x="376" y="313" class="wf-title">Request intake</text><text x="376" y="331">Acknowledgement, review task,</text><text x="376" y="349">link to the property</text></g>
+              <g class="wf-node"><rect x="548" y="290" width="346" height="72" rx="12"/><text x="721" y="313" class="wf-title">Showing engine</text><text x="721" y="331">Confirmation, feedback request</text><text x="721" y="349">and feedback routing</text></g>
+              <g class="wf-node"><rect x="930" y="290" width="216" height="72" rx="12"/><text x="1038" y="331">Buyer deal</text></g>
+              <g class="wf-node is-outlined"><rect x="14" y="374" width="190" height="72" rx="12"/><text x="109" y="406">Agent books on</text><text x="109" y="424">a team calendar</text></g>
+              <g class="wf-node"><rect x="240" y="374" width="272" height="72" rx="12"/><text x="376" y="406" class="wf-title">Team calendars</text><text x="376" y="424">Buyer, listing and showing</text></g>
+              <g class="wf-node"><rect x="548" y="374" width="346" height="72" rx="12"/><text x="721" y="397" class="wf-title">Appointment engine</text><text x="721" y="415">Confirmation, no-show recovery, cancellation,</text><text x="721" y="433">reminders from the calendars</text></g>
+              <g class="wf-node"><rect x="930" y="374" width="216" height="72" rx="12"/><text x="1038" y="406">Deal stage</text><text x="1038" y="424">and outcome tasks</text></g>
+              <g class="wf-node is-outlined"><rect x="14" y="458" width="190" height="72" rx="12"/><text x="109" y="490">Deal moved</text><text x="109" y="508">to nurture</text></g>
+              <g class="wf-node"><rect x="240" y="458" width="272" height="72" rx="12"/><text x="376" y="490" class="wf-title">Stage sync</text><text x="376" y="508">Status, tag and note</text></g>
+              <g class="wf-node"><rect x="548" y="458" width="346" height="72" rx="12"/><text x="721" y="481" class="wf-title">Nurture engine</text><text x="721" y="499">12-month track, re-engagement,</text><text x="721" y="517">future timing track after closing</text></g>
+              <g class="wf-node"><rect x="930" y="458" width="216" height="72" rx="12"/><text x="1038" y="499">Nurture stage</text></g>
+              <text class="wf-branch" x="14" y="568" text-anchor="start">Always on, for every contact</text>
+              <g class="wf-node"><rect x="14" y="584" width="274" height="72" rx="12"/><text x="151" y="607" class="wf-title">Intake normalizer</text><text x="151" y="625">Tidies the name on</text><text x="151" y="643">every new contact</text></g>
+              <g class="wf-node"><rect x="300" y="584" width="274" height="72" rx="12"/><text x="437" y="607" class="wf-title">Reply controller</text><text x="437" y="625">A reply marks the contact</text><text x="437" y="643">and creates a task</text></g>
+              <g class="wf-node"><rect x="586" y="584" width="274" height="72" rx="12"/><text x="723" y="607" class="wf-title">Consent controller</text><text x="723" y="625">Opt-outs become tags</text><text x="723" y="643">that every message checks</text></g>
+              <g class="wf-node"><rect x="872" y="584" width="274" height="72" rx="12"/><text x="1009" y="607" class="wf-title">Lead temperature</text><text x="1009" y="625">Hot qualified leads get</text><text x="1009" y="643">a task for the owner</text></g>
+            </svg>
+          </div>
+          <p class="case-workflow-hint">Swipe sideways to see the whole chart.</p>
+          <figcaption>Each row is one way work enters the system. Blue outlines mark what a person starts. Everything else runs on its own.</figcaption>
+        </figure>
+        <figure class="case-workflow case-flowmap">
+          <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="Chart of how one property record drives the seller side, scrolls sideways on small screens">
+            <svg viewBox="0 0 1160 412" role="img" aria-labelledby="wf-prop-title wf-prop-desc">
+              <title id="wf-prop-title">How one property record drives the seller side</title>
+              <desc id="wf-prop-desc">Top row: a seller fills in the form, a reviewer checks for duplicates, an agent completes the record, prepares the listing and records each offer. Middle row: the system creates the property, audits duplicates, verifies, activates the listing and controls offers. Bottom row: the seller's deal holds at qualification until the property is resolved, then moves to active listing, under offer and under contract, with a task each time.</desc>
+              <text class="wf-branch" x="12" y="22" text-anchor="start">A person</text>
+              <text class="wf-branch" x="12" y="170" text-anchor="start">The system</text>
+              <text class="wf-branch" x="12" y="322" text-anchor="start">The seller's deal</text>
+              <g class="wf-line"><path d="M112 126V182"/><path d="M212 228H246"/><path d="M346 126V182"/><path d="M446 228H480"/><path d="M580 126V182"/><path d="M680 228H714"/><path d="M814 126V182"/><path d="M914 228H948"/><path d="M1048 126V182"/><path d="M814 274V338"/><path d="M1048 274V338"/><path d="M346 274V338"/></g>
+              <g class="wf-node is-outlined"><rect x="12" y="34" width="200" height="92" rx="12"/><text x="112" y="76" class="wf-title">Seller fills in</text><text x="112" y="94" class="wf-title">the intake form</text></g>
+              <g class="wf-node is-outlined"><rect x="246" y="34" width="200" height="92" rx="12"/><text x="346" y="67" class="wf-title">Reviewer checks</text><text x="346" y="85" class="wf-title">for duplicates</text><text x="346" y="103">Sets the check to pass</text></g>
+              <g class="wf-node is-outlined"><rect x="480" y="34" width="200" height="92" rx="12"/><text x="580" y="67" class="wf-title">Agent completes</text><text x="580" y="85" class="wf-title">the record</text><text x="580" y="103">Then marks it verified</text></g>
+              <g class="wf-node is-outlined"><rect x="714" y="34" width="200" height="92" rx="12"/><text x="814" y="67" class="wf-title">Agent prepares</text><text x="814" y="85" class="wf-title">the listing</text><text x="814" y="103">List price, listing agent</text></g>
+              <g class="wf-node is-outlined"><rect x="948" y="34" width="200" height="92" rx="12"/><text x="1048" y="67" class="wf-title">Agent records</text><text x="1048" y="85" class="wf-title">each offer</text><text x="1048" y="103">Status, decision, price</text></g>
+              <g class="wf-node"><rect x="12" y="182" width="200" height="92" rx="12"/><text x="112" y="215" class="wf-title">Property created</text><text x="112" y="233">From the form's address,</text><text x="112" y="251">seller linked as owner</text></g>
+              <g class="wf-node"><rect x="246" y="182" width="200" height="92" rx="12"/><text x="346" y="215" class="wf-title">Duplicate audit</text><text x="346" y="233">Every new record is flagged,</text><text x="346" y="251">with a review task</text></g>
+              <g class="wf-node"><rect x="480" y="182" width="200" height="92" rx="12"/><text x="580" y="215" class="wf-title">Verification</text><text x="580" y="233">Complete: verified</text><text x="580" y="251">Incomplete: back to review</text></g>
+              <g class="wf-node"><rect x="714" y="182" width="200" height="92" rx="12"/><text x="814" y="215" class="wf-title">Listing activation</text><text x="814" y="233">Complete: active listing</text><text x="814" y="251">Missing data: exception task</text></g>
+              <g class="wf-node"><rect x="948" y="182" width="200" height="92" rx="12"/><text x="1048" y="215" class="wf-title">Offer and contract</text><text x="1048" y="233">One path for each outcome,</text><text x="1048" y="251">exception if incomplete</text></g>
+              <g class="wf-node"><rect x="12" y="338" width="668" height="62" rx="12"/><text x="346" y="365" class="wf-title">Holds at qualification</text><text x="346" y="383">The deal can't qualify until the property is resolved</text></g>
+              <g class="wf-node is-filled"><rect x="714" y="338" width="200" height="62" rx="12"/><text x="814" y="365" class="wf-title">Active listing</text><text x="814" y="383">Plus a task for the agent</text></g>
+              <g class="wf-node is-filled"><rect x="948" y="338" width="200" height="62" rx="12"/><text x="1048" y="365" class="wf-title">Under offer, under contract</text><text x="1048" y="383">Plus a task for the agent</text></g>
+            </svg>
+          </div>
+          <p class="case-workflow-hint">Swipe sideways to see the whole chart.</p>
+          <figcaption>The seller side runs from one record per property. Agents update the property, and five record workflows check it and pass the result to the seller through the owner link. The blue boxes are where the seller's deal moves.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The brief</h2>
+          <p>The company sells this system to brokerages of all sizes, and its own team installs it. That's a harder test than a single custom build: it has to work in an account nobody has tried yet, for a team that didn't build it. I worked with the GoHighLevel specialist who started it, and a teammate who ran manual tests.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>Every lead gets a reply and an owner</h3>
+            <p>A form starts an acknowledgement, a round robin assignment, a first follow-up in the agent's name and a task.</p>
+          </li>
+          <li class="service">
+            <h3>One record per property</h3>
+            <p>The seller's form creates the property record and links the seller as owner. Listing, offers and contract then run from that record.</p>
+          </li>
+          <li class="service">
+            <h3>Consent comes first</h3>
+            <p>Opt-outs become tags that every message checks. Nurture messages only go out Monday to Friday, 12:00 to 17:00, in the contact's time zone.</p>
+          </li>
+          <li class="service">
+            <h3>It has to survive installation</h3>
+            <p>The system ships as a GoHighLevel snapshot: one master, loaded into a new account for each brokerage. A snapshot carries the setup, never contacts or deals.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How I worked</h2>
+          <p>Seven stages, in order.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Read what was there, and get it wrong once</h3>
+            <p class="role-text">The first version had 45 workflows, and 13 had never run. I proposed cutting it to 12. The specialist who built it rejected that: too much became manual, and the point of the property automation was lost. They were right. Those 13 weren't dead, just unfinished, so I switched to finishing the design.</p>
+          </li>
+          <li class="role">
+            <h3>Test each engine with real runs</h3>
+            <p class="role-text">I ran the buyer, seller, property and appointment engines with test contacts and read the execution logs, including 24 single-field changes on one test property. A booked showing started nothing. A lead with no owner got a confirmation and no reminders. A buyer with a booked consultation kept getting new-lead follow-ups.</p>
+            <p class="role-tools">Claude Code, Python, GoHighLevel API</p>
+          </li>
+          <li class="role">
+            <h3>Build what was missing</h3>
+            <p class="role-text">Nothing created the property record, so the seller chain could never start. Now the seller's form creates it and links the owner, and sellers wait at qualification until the property is known. I also built team calendars with round robin, a showing engine of 9 workflows (about 45 test scenarios) and a nurture engine of 9 (about 40): a year of 9 emails, 4 texts and agent check-ins.</p>
+            <p class="role-tools">GoHighLevel workflows, custom objects, calendars and forms</p>
+          </li>
+          <li class="role">
+            <h3>Prove fixes in copies, then move them together</h3>
+            <p class="role-text">Fixes went into test copies first. Once the launch blockers passed, a script backed up all 104 workflows, moved the tested versions onto 19 live ones, compared each pair and republished. Then 23 checks on the saved settings passed.</p>
+            <p class="role-tools">Python, GoHighLevel API</p>
+          </li>
+          <li class="role">
+            <h3>Run every journey in the source account</h3>
+            <p class="role-text">Five test leads went through intake, replies, qualification, consultations, no-shows, cancellations, showings, nurture and closed lost. Every contact-side step passed, and so did the property logic. But every hand-off from a property to its seller was skipped, and I traced that to the platform, not the build.</p>
+          </li>
+          <li class="role">
+            <h3>Install it fresh and run everything again</h3>
+            <p class="role-text">A teammate loaded the snapshot into a new account and ran the first journeys, and seller tasks were missing. I compared all 69 deployed workflows with the source, step by step, found the install gaps and repaired them with a script. Then I ran every journey again, and they all passed.</p>
+            <p class="role-tools">Claude Code, Python, GoHighLevel API</p>
+          </li>
+          <li class="role">
+            <h3>Save it so it can move</h3>
+            <p class="role-text">GoHighLevel has no way to paste or upload workflows. So I exported the accounts to JSON and wrote an importer that replays the app's own calls and maps every ID to the target account. In a test it imported all 69 workflows as drafts, and all 69 passed GoHighLevel's publish check.</p>
+            <p class="role-tools">Python, JSON, GoHighLevel API</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What broke, and what fixed it</h2>
+          <p>Some were bugs in the build, some came from the platform, and two were my own mistakes.</p>
+        </div>
+        <ul class="compare-list">
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>assignedTo: ""
+selectedUser: ""
+hand-off target:
+  a workflow in the
+  source account</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>assignedTo: admin user
+selectedUser: admin user
+hand-off target:
+  the same workflow
+  in this account</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A clean install with 162 broken references</h3>
+            <p>The snapshot loaded without one error and every workflow showed as published. But 74 task steps had no assignee, 74 notifications had no recipient and 14 hand-offs pointed at workflows in the source account. No screen shows this. I found it by comparing every workflow with its source, step by step, and a script repaired them.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>Reminder: your is
+scheduled for .
+
+Sent 10 to 15 seconds
+after the confirmation</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>Sent by the calendar,
+exactly 2 hours before,
+with the right date
+and time</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Reminders that went out at once, with blanks</h3>
+            <p>A start step wasn't passing the appointment along, so the reminder workflow skipped its waits and had no details to fill in. One setting fixed that. Then testing showed that leads with no owner got no reminders and one appointment could silence another, so I moved customer reminders to the calendars' own reminders.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>Property created
+3 seconds later:
+duplicate check
+
+"Skipping this action as
+no associated record
+was found."</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>Property created
+Wait 1 minute
+Duplicate check
+
+Review task raised about
+90 seconds after creation</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Three seconds against eleven</h3>
+            <p>In the new account, GoHighLevel took about 11 seconds to make a new owner link searchable, and the workflow looked for it after 3. So the first task for every new property was skipped. A one-minute wait fixed it, and two test sellers confirmed it.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>name: "(TEST F11/SF6:
+  no stage filter)"
+
+pipeline_stage_id:
+  still in the settings</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>Built properly in test
+copies, then moved live.
+
+23 checks on saved
+settings passed</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A fix that only changed a name</h3>
+            <p>This one is my mistake. I reported two fixes as proven when they had never been built. The rename saved, the filter removal didn't, and nothing gave an error. Now I check the saved settings and never trust a step name.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>Verification: backwards
+Duplicate control:
+  backwards
+Offer routing: wrong
+
+Build a router</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>Five record workflows
+already existed.
+Their logic was right.
+
+3 findings withdrawn</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>My own findings were wrong</h3>
+            <p>My test results were real, but my explanation wasn't. GoHighLevel's workflow list doesn't return record-type workflows, so I never saw the five doing the work. Tracing bulk-action records led me to them, and I put a correction at the top of my report.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre>Source account:
+every property hand-off
+skipped, though the
+owner link exists</pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre>New account:
+same workflows,
+hand-offs arrive</pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A fault that wasn't in the build</h3>
+            <p>GoHighLevel stopped finding new record links in its contact search on the source account, so no seller got a property task. Older links still worked and the workflows hadn't changed, which pointed away from the build. The fresh install confirmed it: the same workflows worked there.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>Everything here comes from tests with made-up leads. I have no numbers from a live brokerage, so this page doesn't claim more leads, bookings or sales.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>69 workflows in 7 engines, all published in the source account, with 2,706 steps and 63 triggers.</li>
+              <li>Every journey passed on the fresh install: buyer, seller with property, inquiry, showing, nurture in and out, and closed lost on both sides.</li>
+              <li>162 broken references repaired, with 0 left on a recount.</li>
+              <li>A reminder that went out exactly 2 hours before its appointment.</li>
+              <li>A repair script and a runbook step, so the next install doesn't start from zero.</li>
+              <li>A JSON export of the accounts, plus an importer.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What I couldn't prove yet</h3>
+            <ul>
+              <li>Texts on a real phone. The test account had no phone number, so texts log as failed and STOP by text is untested.</li>
+              <li>Email reaching the inbox. The final run's emails show as sent, but GoHighLevel reports no delivery status on them.</li>
+              <li>The 24-hour reminders, which were outside the test window.</li>
+              <li>The form screens in the final run. Test leads went in through the API with the exact fields the forms write, because I don't automate CAPTCHAs. A teammate's real submissions came before the repair.</li>
+              <li>The 4-hour qualification timer in the final run. I started that step directly, and the timer had passed in the earlier source-account test.</li>
+              <li>The importer on an empty account. I tested it in one that already had the assets, so creating the property object from nothing has never run.</li>
+            </ul>
+            <p class="case-held">Installing it for a brokerage is still a manual job from a runbook, and this version has no AI in it.</p>
+          </div>
+        </div>
+        <p class="case-takeaway">A clean install can still be broken. Running it is how I found out.</p>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="under-the-hood">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Under the hood</h2>
+        </div>
+        <figure class="case-workflow case-flowmap">
+          <div class="case-workflow-scroll" tabindex="0" role="group" aria-label="Chart of the offer and contract workflow, scrolls sideways on small screens">
+            <svg viewBox="0 0 1160 372" role="img" aria-labelledby="wf-offer-title wf-offer-desc">
+              <title id="wf-offer-title">Offer and contract control, one of the record workflows</title>
+              <desc id="wf-offer-desc">When the offer status changes, the workflow checks the record and takes one of five paths: contract ready, countered, return to market, offer review or exception. Each path updates the property, except exception, and then hands the seller to a follow-up workflow.</desc>
+              <g class="wf-line"><path d="M170 183H214"/><path d="M332 183C372 183 392 39 432 39"/><path d="M766 39H806"/><path d="M332 183C372 183 392 111 432 111"/><path d="M766 111H806"/><path d="M332 183C372 183 392 183 432 183"/><path d="M766 183H806"/><path d="M332 183C372 183 392 255 432 255"/><path d="M766 255H806"/><path d="M332 183C372 183 392 327 432 327"/><path d="M432 327H806"/></g>
+              <g class="wf-node"><rect x="14" y="146" width="156" height="74" rx="12"/><text x="92" y="170">Offer status</text><text x="92" y="188">changes on</text><text x="92" y="206">the record</text></g>
+              <g class="wf-node is-outlined"><rect x="214" y="146" width="118" height="74" rx="12"/><text x="273" y="179">Check</text><text x="273" y="197">the record</text></g>
+              <g class="wf-node"><rect x="432" y="14" width="334" height="50" rx="12"/><text x="599" y="35" class="wf-title">Contract ready</text><text x="599" y="53">Move property to under contract</text></g>
+              <g class="wf-node is-filled"><rect x="806" y="14" width="340" height="50" rx="12"/><text x="976" y="44">Seller contract hand-off</text></g>
+              <g class="wf-node"><rect x="432" y="86" width="334" height="50" rx="12"/><text x="599" y="107" class="wf-title">Countered</text><text x="599" y="125">Keep property under offer</text></g>
+              <g class="wf-node is-filled"><rect x="806" y="86" width="340" height="50" rx="12"/><text x="976" y="116">Counteroffer review hand-off</text></g>
+              <g class="wf-node"><rect x="432" y="158" width="334" height="50" rx="12"/><text x="599" y="179" class="wf-title">Return to market</text><text x="599" y="197">Return property to active listing</text></g>
+              <g class="wf-node is-filled"><rect x="806" y="158" width="340" height="50" rx="12"/><text x="976" y="188">Return to market hand-off</text></g>
+              <g class="wf-node"><rect x="432" y="230" width="334" height="50" rx="12"/><text x="599" y="251" class="wf-title">Offer review</text><text x="599" y="269">Mark property under offer</text></g>
+              <g class="wf-node is-filled"><rect x="806" y="230" width="340" height="50" rx="12"/><text x="976" y="260">Seller offer review hand-off</text></g>
+              <g class="wf-node"><rect x="432" y="302" width="334" height="50" rx="12"/><text x="599" y="323" class="wf-title">Exception</text><text x="599" y="341">No change to the record</text></g>
+              <g class="wf-node is-filled"><rect x="806" y="302" width="340" height="50" rx="12"/><text x="976" y="332">Seller offer exception</text></g>
+            </svg>
+          </div>
+          <p class="case-workflow-hint">Swipe sideways to see the whole chart.</p>
+          <figcaption>One of the five record workflows, drawn from its exported file. An accepted offer only reaches contract with a verified decision, an accepted price and a contract date. Anything incomplete goes to the exception path, which tells the agent what's missing.</figcaption>
+        </figure>
+        <div class="case-shots is-screens">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/recount.jpg" width="900" height="526" alt="Terminal output: 69 workflows, 2,706 steps and 63 triggers in the source account; 74 tasks with no assignee, 74 notifications with no recipient and 14 misdirected hand-offs after the install; 0 of each after the repair; 65 workflows identical and 4 different" loading="lazy">
+            <figcaption>I re-ran this count on the saved exports for this page. It reads local files only. The 4 workflows that differ are in the appointment engine, and were edited directly in the test account.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/report-property.jpg" width="900" height="283" alt="Test report table: each change on the property, what the record did and what reached the seller, ending with the deal at under contract" loading="lazy">
+            <figcaption>From my test report, on the fresh install: a change on the property, what the record did, and what reached the seller. The prices are made-up test data.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/brokerage-gohighlevel-system/report-reminders.jpg" width="900" height="276" alt="Test report table: the 2-hour reminder sent exactly 2 hours before, then the no-show and cancellation paths" loading="lazy">
+            <figcaption>The same report, on reminders, no-shows and cancellations.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <div class="case-table-wrap">
+              <table class="case-table">
+                <thead><tr><th>Check on the fresh install</th><th>Result</th></tr></thead>
+                <tbody>
+                  <tr><td>Right sender and content on every message</td><td>Passed. Inbox delivery not confirmed</td></tr>
+                  <tr><td>Texts on a real phone, and STOP by text</td><td>Not tested: no phone number on this account</td></tr>
+                  <tr><td>Times shown in the contact's time zone</td><td>Passed</td></tr>
+                  <tr><td>Reminders on time, none after a cancellation</td><td>Passed for the 2-hour reminder. 24-hour reminders were outside the test window</td></tr>
+                  <tr><td>Feedback link fills in the appointment, email and phone</td><td>Passed</td></tr>
+                  <tr><td>Listing link fills in the property and links the buyer to it</td><td>Passed</td></tr>
+                  <tr><td>A reply creates a task for the owner</td><td>Passed</td></tr>
+                  <tr><td>Booking on a team calendar keeps the contact's owner</td><td>Passed</td></tr>
+                  <tr><td>Round robin assigns real agents</td><td>Passed</td></tr>
+                  <tr><td>Property changes reach the seller</td><td>Passed, after the repair and the wait</td></tr>
+                  <tr><td>Link values filled in, calendar reminders present</td><td>Passed</td></tr>
+                  <tr><td>Calendar members in place, bookings work for each agent</td><td>Passed</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>Every acceptance check from the final run, including the ones I couldn't finish.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <div class="case-table-wrap">
+              <table class="case-table">
+                <thead><tr><th>Engine</th><th>Workflows</th><th>What it covers</th></tr></thead>
+                <tbody>
+                  <tr><td>System foundation</td><td>8</td><td>Intake, routing, replies, consent, lead temperature</td></tr>
+                  <tr><td>Buyer</td><td>11</td><td>First response to closed lost</td></tr>
+                  <tr><td>Seller</td><td>18</td><td>First response, listing, offers, contract</td></tr>
+                  <tr><td>Property</td><td>10</td><td>Create the record, duplicates, verification, lifecycle</td></tr>
+                  <tr><td>Appointment</td><td>4</td><td>Confirmation, reminder alert, cancellation, no-show</td></tr>
+                  <tr><td>Showing</td><td>9</td><td>Request to feedback</td></tr>
+                  <tr><td>Nurture</td><td>9</td><td>12-month tracks, re-engagement, opt-out</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>The 69 workflows, by engine.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Need a CRM that still works after install?</h2>
+          <p>I build and test GoHighLevel systems against real journeys, and I'll tell you what I couldn't prove. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>
