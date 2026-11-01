@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keepa arbitrage engine: case study | Rafael Bashan</title>
+  <meta name="description" content="How I built an Amazon sourcing pipeline for PlumbersStock with n8n and Keepa, inside a redesigned inventory dashboard, with checks that reject fake deals.">
+  <meta property="og:title" content="An Amazon sourcing engine that rejects fake deals | Rafael Bashan">
+  <meta property="og:description" content="A case study: scoring PlumbersStock products against Amazon with n8n and Keepa, then redesigning the dashboard without changing a single number.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/keepa-arbitrage-engine/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: inventory dashboard for PlumbersStock</p>
+          <h1>An Amazon sourcing engine that rejects fake deals</h1>
+          <p class="hero-intro">Which PlumbersStock products could be resold on Amazon at a profit? I built a pipeline that answers that from Keepa market data, with no access to Amazon's seller systems, and added it to the team's inventory dashboard. Then I redesigned the whole dashboard for desktop and phone.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#screens">See the screens</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>leads scored</dt><dd>21</dd></div>
+            <div><dt>fake ROI caught</dt><dd>122%</dd></div>
+            <div><dt>numbers checked</dt><dd>16,033</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="Example: how a lead moves through the pipeline">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Product read</b><span>UPC, price and stock from a PlumbersStock category</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Matched through Keepa</b><span>Buy Box, fees, sales rank and competing offers</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Fake deal rejected</b><span>Stale data can't count as profitable, whatever the ROI says</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The arbitrage page</h2>
+          <p>Pick a category, start a run, and every product comes back scored with its fees shown, so the team can see the reasoning as well as the answer.</p>
+        </div>
+        <div class="case-shots">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/keepa-arbitrage-engine/run-panel.jpg" alt="Arbitrage Leads page with category and product count choices, a Run sourcing button, the Keepa token balance and summary cards" width="1320" height="473">
+            <figcaption>Runs start from the dashboard. Before you press the button, the panel shows the Keepa token balance and what the run will cost.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/keepa-arbitrage-engine/leads.jpg" alt="Leads table listing plumbing products with cost, Amazon price, fees, net profit, ROI, margin, sales rank, offers and status" width="1320" height="695" loading="lazy">
+            <figcaption>Every lead shows cost, Amazon price, fees, net profit, ROI, margin, sales rank and competing offers, with links to check it on PlumbersStock, Amazon and Keepa.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/keepa-arbitrage-engine/runs.jpg" alt="Recent runs table showing category, products scraped and matched, Keepa tokens used and a Success or Partial status" width="1320" height="438" loading="lazy">
+            <figcaption>Every run is logged with the tokens it used. A product page that fails marks the run as Partial and names the URL, so nothing goes missing quietly.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="question">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The question</h2>
+          <p>Resale margin depends on Amazon's fees and on who holds the Buy Box, so comparing two prices gives the wrong answer. The pipeline had to get it right within four limits.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>No Amazon seller access</h3>
+            <p>Market data comes only from Keepa. There is no Amazon SP-API, Seller Central or AWS access anywhere in the system.</p>
+          </li>
+          <li class="service">
+            <h3>Keepa tokens are scarce</h3>
+            <p>The plan refills 1 token a minute, up to 60, and a matched product costs about 3. Every run has to fit that budget.</p>
+          </li>
+          <li class="service">
+            <h3>A deal has to survive real fees</h3>
+            <p>Net profit is the Amazon price minus the referral fee, FBA pick and pack, prep and supplier cost. A lead only counts at 30% ROI and $3 profit.</p>
+          </li>
+          <li class="service">
+            <h3>Old data can't count</h3>
+            <p>A lead scored on Keepa data more than 7 days old is marked stale and can't be profitable, whatever the numbers say.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How the pipeline works</h2>
+          <p>Six steps, from pressing the button to a scored lead on screen.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Start a run from the dashboard</h3>
+            <p class="role-text">Choose a category and up to 15 products. The server refuses a run that would overdraw the Keepa balance or overlap one already running.</p>
+            <p class="role-tools">Next.js, TypeScript</p>
+          </li>
+          <li class="role">
+            <h3>Read the supplier catalog</h3>
+            <p class="role-text">An n8n workflow reads the category page, then each product's structured data: UPC, part number, price and stock. It identifies itself as a bot, fetches one page at a time with a pause, and only accepts approved category URLs.</p>
+            <p class="role-tools">n8n, JavaScript</p>
+          </li>
+          <li class="role">
+            <h3>Match to Amazon with one Keepa call</h3>
+            <p class="role-text">All the UPCs go into a single bulk request, which returns Amazon's matching listings with Buy Box price, fees, sales rank and offer counts.</p>
+            <p class="role-tools">Keepa API</p>
+          </li>
+          <li class="role">
+            <h3>Clean the data and score each lead</h3>
+            <p class="role-text">Keepa's placeholder values become blanks, then each lead gets its fees, net profit, ROI, margin and a stale check.</p>
+            <p class="role-tools">JavaScript in n8n, 10 automated tests</p>
+          </li>
+          <li class="role">
+            <h3>Save the lead and log the run</h3>
+            <p class="role-text">Leads are stored against their UPC and Amazon listing, so running a category again refreshes them instead of creating duplicates. The dashboard watches for the finished run and reloads.</p>
+            <p class="role-tools">Supabase, Postgres</p>
+          </li>
+          <li class="role">
+            <h3>Keep it separate inside the dashboard</h3>
+            <p class="role-text">The page lives in the inventory dashboard but has its own database and workflow, so it can't affect the inventory data. The browser only gets read access, and every other key stays on the server.</p>
+            <p class="role-tools">Next.js, TanStack Table, row-level security</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What the checks catch</h2>
+          <p>Market data is messy, and a bad number here could mean buying the wrong stock. Automated tests cover each of these.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>A 122% ROI that wasn't real</h3>
+            <p>Keepa returns its last snapshot for a listing it can't refresh, usually a dead one. One of those showed a 122% ROI. The stale check now stops that kind of lead from counting.</p>
+          </li>
+          <li class="service">
+            <h3>Placeholders posing as prices</h3>
+            <p>Keepa uses -1 and -2 for missing values. The pipeline turns them into blanks, so they can't flow into profit and ROI.</p>
+          </li>
+          <li class="service">
+            <h3>Running out of tokens</h3>
+            <p>If Keepa refuses a request, the run is logged as an error with the reason and no leads are written.</p>
+          </li>
+          <li class="service">
+            <h3>A save that fails</h3>
+            <p>If leads can't be saved to the database, the run is marked as an error instead of being reported as a success.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="redesign">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Redesigning without changing a number</h2>
+          <p>All five pages moved onto one set of shared components, with a phone layout. A redesign can't be allowed to change a purchasing figure, so I captured every number on screen before and after. All 16,033 matched.</p>
+        </div>
+        <div class="case-redesign">
+          <div class="case-shots">
+            <figure class="case-shot">
+              <img src="../images/v2/case-studies/keepa-arbitrage-engine/dashboard-before.jpg" alt="The Days Out chart before the redesign, with serif type and heavy dark bars on a light blue page" width="1100" height="367" loading="lazy">
+              <figcaption>Before. Staff names are blurred in both images.</figcaption>
+            </figure>
+            <figure class="case-shot">
+              <img src="../images/v2/case-studies/keepa-arbitrage-engine/dashboard-after.jpg" alt="The same chart after the redesign, with cleaner type, slim blue bars and an underlined navigation tab" width="1100" height="365" loading="lazy">
+              <figcaption>After, with the same data.</figcaption>
+            </figure>
+          </div>
+          <figure class="case-shot case-phone">
+            <img src="../images/v2/case-studies/keepa-arbitrage-engine/phone.jpg" alt="The arbitrage page on a phone, with category buttons wrapping onto several lines and no sideways scrolling" width="375" height="768" loading="lazy">
+            <figcaption>Phone layout, tested at 390 px wide with no sideways scrolling.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>The engine works and the answer so far is clear, though it isn't the final one.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>21 Amazon matches scored, with every fee shown.</li>
+              <li>0 leads clear the target at public list prices. The best returned 5.9% ROI, $17.00 a unit.</li>
+              <li>10 of 10 automated tests passing on the pipeline's code.</li>
+              <li>A redesigned five-page dashboard with 16,033 numbers checked and unchanged.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What it doesn't do yet</h3>
+            <ul>
+              <li>Use real buying costs. It works from public list prices, and real cost is the number most likely to change the answer.</li>
+              <li>Count inbound shipping, sales tax or storage fees.</li>
+              <li>Score more than 15 products a run on the current Keepa plan.</li>
+              <li>Recheck old leads on its own. The stale check runs when a lead is scored, so older leads need a new run.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="case-takeaway">The useful answer was no: at list prices, nothing clears the target. The next test is real buying cost.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Need numbers you can act on?</h2>
+          <p>I build pipelines and dashboards with the checks built in. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>
