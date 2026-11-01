@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VA pre-screening form: case study | Rafael Bashan</title>
+  <meta name="description" content="How I rebuilt eight saved screens of a VA pre-screening form as one working HTML file, then tested it against the originals. A sample under a stand-in name.">
+  <meta property="og:title" content="Eight saved screens, one working form | Rafael Bashan">
+  <meta property="og:description" content="A case study: a multi-step hiring form rebuilt from saved pages as one self-contained file, with 325 browser checks behind it.">
+  <meta property="og:image" content="https://historfic.github.io/Portfolio/images/v2/case-studies/va-prescreening-form/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: VA pre-screening form</p>
+          <h1>Eight saved screens, one working form</h1>
+          <p class="hero-intro">A saved web page keeps its wording and loses its behaviour. I took eight saved screens of a VA pre-screening form, where the buttons no longer did anything, and rebuilt them as one HTML file that checks answers, saves progress and needs no server.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://historfic.github.io/va-prescreening/" target="_blank" rel="noopener">Try the form</a>
+            <a class="btn btn-ghost js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+          </div>
+          <dl class="stats">
+            <div><dt>saved screens rebuilt</dt><dd>8</dd></div>
+            <div><dt>questions across 5 steps</dt><dd>46</dd></div>
+            <div><dt>browser checks passed</dt><dd>325 of 325</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="How the saved screens became one form">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>8 saved screens</b><span>Scripts gone, so nothing on them works</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>1 HTML file, 139 KB</b><span>Styles, fonts and script all inside</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>A form that runs</b><span>Try it: nothing you type is sent</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="case-brief-head">
+          <div class="section-head">
+            <h2>The brief</h2>
+            <p>This is a sample, not client work. I rebuilt a real company's VA pre-screening form from saved copies of its pages, so the questions are still that company's wording. I've left its name out, it has no connection to this page, and Corvane is a stand-in name.</p>
+            <p>The job was to get the same form running again as one file, with no server behind it. I built it with Claude Code, working only from the saved pages.</p>
+          </div>
+          <figure class="case-demo">
+            <img src="../images/v2/case-studies/va-prescreening-form/start.jpg" alt="The form's start page: a notice that it is a sample, a yellow banner with the stand-in name Corvane, and a list of what to have ready" width="800" height="500" loading="lazy">
+            <figcaption>The <a href="https://historfic.github.io/va-prescreening/" target="_blank" rel="noopener">live form</a>. Nothing you enter leaves your browser, and a notice on every screen says so.</figcaption>
+          </figure>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>One file, nothing else</h3>
+            <p>Styles, fonts and script all sit inside one HTML file, so it opens with a double-click and works with no internet connection.</p>
+          </li>
+          <li class="service">
+            <h3>Same questions, same behaviour</h3>
+            <p>Labels, help text, answer buttons and field limits come straight from the saved pages. A test compares them, so nothing relies on my copying.</p>
+          </li>
+          <li class="service">
+            <h3>No real answers in the file</h3>
+            <p>The saved pages held a real application. Tests replay those answers from a private copy, and a search of the published file for them finds nothing.</p>
+          </li>
+          <li class="service">
+            <h3>Honest about being a sample</h3>
+            <p>With no server, nothing is sent. The last screen still says "We'll email you", so a notice on every screen makes clear it won't.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it was rebuilt</h2>
+          <p>Six steps, in order. The first and the last are what make the rebuild checkable.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>Read the saved pages as data</h3>
+            <p class="role-text">The saved copies had lost their scripts, so the markup was all that survived. A script pulled every visible text, field setting, answer option and review row into a comparison file, so later checks had something exact to compare against.</p>
+            <p class="role-tools">Python</p>
+          </li>
+          <li class="role">
+            <h3>Work out what the pages didn't show</h3>
+            <p class="role-text">Blank copies hide follow-up questions. The filled-in review page listed three rows no blank page had: other commitments, what could get in the way, and where you heard about the company. It also listed tools in the order they were picked, so the new form keeps that order.</p>
+          </li>
+          <li class="role">
+            <h3>Describe the questions in one list</h3>
+            <p class="role-text">All 46 questions live in one list, with their type, limits, help text and when they appear. A small renderer turns that list into fields, so adding a question means adding one entry, plus a row if it should show on the review screen.</p>
+            <p class="role-tools">HTML5, CSS3, vanilla JavaScript</p>
+          </li>
+          <li class="role">
+            <h3>Save progress without a server</h3>
+            <p class="role-text">The first screen promises that answers are saved in the browser until you submit. They're saved after every change and deleted on submit. The current step lives in the URL, so reload, Back and Forward all work.</p>
+            <p class="role-tools">localStorage, URL hash</p>
+          </li>
+          <li class="role">
+            <h3>Replace what needs a backend</h3>
+            <p class="role-text">The email code and Cloudflare check can't run without one, so they're gone, and "Send code" became "Continue". A button shouldn't promise something that doesn't happen.</p>
+          </li>
+          <li class="role">
+            <h3>Test it against the originals</h3>
+            <p class="role-text">A browser test walks every screen and compares it with the file from step 1. It then replays the answers from the saved review page and compares all 45 rows, before checking reloads, edits, follow-ups, phone widths and HTML typed into answers.</p>
+            <p class="role-tools">agent-browser, Chromium, JavaScript</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What broke, and what fixed it</h2>
+          <p>None of this reached the live page, because it all turned up before launch. In three of the four, the test was wrong and the form was right, which is worth remembering before trusting any result.</p>
+        </div>
+        <ul class="compare-list">
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>// answer read from
+// the saved page
+open_to_other_roles:
+"NoSkills and experienceEdit"</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>if tag == "div":
+    self.finish_cell()
+
+# open_to_other_roles: "No"</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A test that blamed the form</h3>
+            <p>The first full run failed 16 checks and stopped early. The form was fine. The saved pages are minified with few closing tags, so my parser ran the last answer in each section into the next heading, and no such answer exists. That, plus one stray fragment, caused all 16.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>click "label.radio"
+selected: null
+
+// target under the
+// sticky bar</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>el.scrollIntoView({
+  block: "center"
+})
+click "label.radio"
+selected: "Yes"</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Scripted clicks passed, real clicks missed</h3>
+            <p>A scripted click works even if something covers the button. A real mouse click doesn't: with a question under the sticky Back and Next bar, the click hit the bar instead. A person would scroll first, and the original has the same bar, so I kept it. The test now centres each target first.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>expected:
+"Slack, Asana, ..."
+
+got:
+"Asana, ... Slack"</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>// re-picked tools
+// move to the end
+tools.slice(-2) ==
+["Slack", "Claude Code"]</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>A failure that was correct behaviour</h3>
+            <p>After a test switched two tools off and on again, the review row no longer matched the saved page. The form was right. Tools list in the order they're picked, as in the original, so re-picked ones move to the end. The check now tests for exactly that.</p>
+          </li>
+          <li class="compare">
+            <div class="compare-shots is-code">
+              <figure><pre tabindex="0"><code>submitUrl: '',
+
+await fetch(
+  CONFIG.submitUrl,
+  { method: 'POST', ... })</code></pre><figcaption>Before</figcaption></figure>
+              <figure class="is-kept"><pre tabindex="0"><code>finishedEmail = state.email
+clearDraft()
+
+// nothing is sent anywhere</code></pre><figcaption>After</figcaption></figure>
+            </div>
+            <h3>Code the sample didn't need</h3>
+            <p>The first version could post finished applications to a server, with a clear error if the send failed, and that path passed its tests. Then the brief settled on a showcase with no database, so I removed it. One check now fails if any sending code comes back.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>These are test results from the published page, run in November 2026. Nobody has applied through it, so there are no completion numbers, and I'm not claiming any.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>8 saved screens became 1 HTML file of 139 KB, with its fonts inside.</li>
+              <li>46 questions across 5 steps, including 3 follow-ups the blank copies never showed.</li>
+              <li>325 of 325 automated checks passed on the live page: 247 on the flow and 78 on layout at 1280, 390 and 320 pixels wide.</li>
+              <li>45 of 45 review rows matched the saved page exactly when its answers were replayed.</li>
+              <li>No requests beyond the page itself while filling in the form, and no page errors.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Where it stops</h3>
+            <ul>
+              <li>It's a sample. Nothing is sent, so the "We'll email you" on the last screen never happens. The own-words warning mentions copy-paste and AI checks, and nothing runs them.</li>
+              <li>There's no email code or Cloudflare check, so any address gets through.</li>
+              <li>Most dropdown options are mine, because the saved pages only showed the values someone had chosen. The 3 follow-up questions, when they appear, and the error messages are my wording too.</li>
+              <li>Tests ran in Chromium at set window sizes. It hasn't been run in Safari, Firefox or on a real phone.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="case-takeaway">A saved page shows what a form looked like, not what it did. The work is finding the behaviour, then proving the rebuild matches.</p>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="under-the-hood">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Under the hood</h2>
+        </div>
+        <div class="case-shots">
+          <div class="case-redesign">
+            <div class="case-shots">
+              <figure class="case-shot">
+                <pre class="case-code" tabindex="0"><code>{
+  kind: 'textarea',
+  id: 'shift_blockers',
+  label: 'What could get in the way?',
+  rows: 2,
+  maxlength: 500,
+  required: (answers) =&gt; answers.shift_commitment === 'No',
+  showIf: (answers) =&gt; Boolean(answers.shift_commitment),
+},</code></pre>
+                <figcaption>One follow-up question, as written in the file. It appears once the question above it is answered, and it's only required if the answer is No. That rule is my reading of the original's help text.</figcaption>
+              </figure>
+              <figure class="case-shot">
+                <div class="case-table-wrap" tabindex="0" role="region" aria-label="Browser test results">
+                  <table class="case-table">
+                    <thead>
+                      <tr><th scope="col">What ran</th><th scope="col">Passed</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Every screen against the saved pages, validation and follow-ups</td><td class="is-now">202 of 202</td></tr>
+                      <tr><td>Reloads, edits, Back and Forward, HTML in answers, submitting</td><td class="is-now">29 of 29</td></tr>
+                      <tr><td>After submitting, incomplete submits, "Not you?", fonts and links</td><td class="is-now">16 of 16</td></tr>
+                      <tr><td>Layout at 1280, 390 and 320 pixels wide</td><td class="is-now">78 of 78</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <figcaption>The test run against the live page, in Chromium. Real clicks and key presses were tried separately, on top of these.</figcaption>
+              </figure>
+            </div>
+            <figure class="case-shot">
+              <img src="../images/v2/case-studies/va-prescreening-form/phone.jpg" alt="Step 3 on a phone: answering Yes to other employment reveals a follow-up question, with Back and Next pinned to the bottom of the screen" width="750" height="1536" loading="lazy">
+              <figcaption>Step 3 on a phone, with made-up answers. Answering Yes reveals the follow-up, and Back and Next stay pinned to the bottom.</figcaption>
+            </figure>
+          </div>
+          <figure class="case-shot is-narrow">
+            <img src="../images/v2/case-studies/va-prescreening-form/review.jpg" alt="The review screen for a made-up applicant, listing answers by section with an Edit button on each" width="900" height="1069" loading="lazy">
+            <figcaption>The review screen, with a made-up applicant. Its labels and layout match the saved page, row for row.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Need a form or web tool that actually runs?</h2>
+          <p>I build forms and small web tools, and test them in a real browser before handing them over. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>
