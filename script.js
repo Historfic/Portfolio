@@ -6,7 +6,7 @@ const TOOLS = [
   { name: "Make", icon: "images/skills/make.png" },
   { name: "Zapier", icon: "images/skills/zapier.png" },
   { name: "GoHighLevel", icon: "images/skills/ghl.png" },
-  { name: "Retell", icon: "images/skills/retell.png" },
+  { name: "Retell", icon: "images/skills/retell-dark.png" },
   { name: "VAPI", icon: "images/skills/vapi.png" },
   { name: "Claude Code", icon: "https://cdn.simpleicons.org/claude" },
   { name: "Power BI", icon: "images/skills/power.png" },
