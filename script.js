@@ -48,6 +48,9 @@ const PROJECTS = [
     tools: "Retell, n8n, Airtable, API integration, Twilio, booked appointments" },
   { title: "GoHighLevel voice assistant for outbound calls", cat: "AI voice", group: "voice",
     tools: "GoHighLevel, OpenAI, Retell, n8n", img: "images/data/ghl_outbound.png" },
+  { title: "Alpha & Omega: inbound AI calls turned into RoofLink leads, with email alerts and SMS follow-up", cat: "AI voice", group: "voice",
+    tools: "Make, Vapi, OpenAI, Airtable, Twilio, Gmail, RoofLink API",
+    img: "images/v2/projects/alpha-omega-inbound-post-call.jpg" },
   // Built, not yet written up: each card says so until its case study exists.
   { title: "Roofing inbound receptionist: storm damage calls booked for inspection", cat: "AI voice", group: "voice",
     tools: "GoHighLevel, n8n, Retell, VAPI, Twilio", soon: true },
