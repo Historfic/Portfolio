@@ -14,7 +14,7 @@ const TOOLS = [
   { name: "Microsoft Fabric", icon: "images/skills/Microsoft-Fabric.png" },
 ];
 
-// group = which filter the project sits under; cat = the label shown on the card
+// group = which filter(s) the project sits under, space separated; cat = the label shown on the card
 const PROJECTS = [
   { title: "Real estate brokerage system on GoHighLevel: 69 workflows, tested on a fresh install", cat: "CRM automation", group: "automation",
     tools: "Claude Code, GoHighLevel, GoHighLevel API, Python",
@@ -103,6 +103,9 @@ const PROJECTS = [
     tools: "n8n, Google Gemini, AI agent, Facebook Ads, webhook",
     link: "https://docs.google.com/presentation/d/1GhD9gjL1ktH-BfwTnJgbpYXVIeZXglOf0WXzJUgcPv0/edit?usp=sharing",
     img: "images/v2/slides/facebook-ads-chatbot.jpg" },
+  { title: "SEO blog agent: 3,000 to 5,000-word articles for a rental website", cat: "AI agent", group: "agents automation",
+    tools: "n8n, Claude (Anthropic), Google Sheets, Pexels API, Google Drive",
+    img: "images/v2/automation/seo-blog-content-agent.jpg" },
   { title: "JobIQ: AI-powered job search and auto-apply engine", cat: "AI agent", group: "agents",
     tools: "Claude Code, React, Python, Claude API, OnlineJobs.ph scraping pipeline", },
   { title: "YouTube analyzer", cat: "AI agent", group: "agents",
@@ -257,7 +260,7 @@ function renderProjects() {
 
   const filters = document.getElementById("filters");
   filters.innerHTML = GROUPS.map((g) => {
-    const n = g.id === "all" ? PROJECTS.length : PROJECTS.filter((p) => p.group === g.id).length;
+    const n = g.id === "all" ? PROJECTS.length : PROJECTS.filter((p) => p.group.split(" ").includes(g.id)).length;
     return `<button type="button" class="filter" data-group="${g.id}" aria-pressed="${g.id === "all"}">${g.label} (${n})</button>`;
   }).join("");
 
@@ -273,7 +276,7 @@ function renderProjects() {
     const cards = [...list.children];
     let shown = 0;
     cards.forEach((card) => {
-      const match = active === "all" || card.dataset.group === active;
+      const match = active === "all" || card.dataset.group.split(" ").includes(active);
       const visible = match && (active !== "all" || expanded || shown < FIRST_BATCH);
       card.hidden = !visible;
       if (visible) shown += 1;
