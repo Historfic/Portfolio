@@ -54,6 +54,12 @@ const PROJECTS = [
   { title: "Alpha & Omega: inbound AI calls turned into RoofLink leads, with email alerts and SMS follow-up", cat: "AI voice", group: "voice",
     tools: "Make, Vapi, OpenAI, Airtable, Twilio, Gmail, RoofLink API",
     img: "images/v2/projects/alpha-omega-inbound-post-call.jpg" },
+  { title: "Alpha & Omega: KC Quality Exteriors outbound AI calls turned into RoofLink leads, with email and SMS follow-up", cat: "AI voice", group: "voice",
+    tools: "Make, Vapi, OpenAI, Airtable, Twilio, Gmail, RoofLink API",
+    img: "images/v2/projects/alpha-omega-kc-outbound-post-call.jpg" },
+  { title: "Alpha & Omega: KC Quality Exteriors lead reactivation, past leads called back by a Vapi AI agent", cat: "AI voice", group: "voice",
+    tools: "Make, Airtable, Vapi, Twilio",
+    img: "images/v2/projects/alpha-omega-kc-lead-reactivation.jpg" },
   // Built, not yet written up: each card says so until its case study exists.
   { title: "Roofing inbound receptionist: storm damage calls booked for inspection", cat: "AI voice", group: "voice",
     tools: "GoHighLevel, n8n, Retell, VAPI, Twilio", soon: true },
