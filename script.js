@@ -268,10 +268,18 @@ const GROUPS = [
 ];
 
 const CERTS = [
-  { title: "Software Development with Claude Code", issuer: "DataCamp" },
-  { title: "Certified GoHighLevel Manager", issuer: "Tara AI Community+" },
-  { title: "End to End System Design with n8n", issuer: "Technical Virtual Assistants PH" },
-  { title: "No Code Automation with Zapier", issuer: "Technical Virtual Assistants PH" },
+  { title: "Software Development with Claude Code", issuer: "DataCamp",
+    link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/fc15c5105aee568156938d53ac46c8656a177708",
+    img: "images/cert/software-development-with-claude-code.jpg" },
+  { title: "Certified GoHighLevel Manager", issuer: "Tara AI Community+",
+    link: "https://my-certificates.com/certificates/6a9574ee8150820c04c7d4a5",
+    img: "images/cert/certified-gohighlevel-manager.jpg" },
+  { title: "End to End System Design with n8n", issuer: "Technical Virtual Assistants PH",
+    link: "https://my-certificates.com/certificates/698c8d387664f5c88193b3c1",
+    img: "images/cert/end-to-end-system-design-with-n8n.jpg" },
+  { title: "No Code Automation with Zapier", issuer: "Technical Virtual Assistants PH",
+    link: "https://my-certificates.com/certificates/6932e932d99ce93dffa854bd",
+    img: "images/cert/no-code-automation-with-zapier.jpg" },
   { title: "Microsoft Fabric Analytics Engineer Associate", issuer: "Microsoft",
     link: "https://learn.microsoft.com/en-us/users/rafaelbashan-7980/credentials/certification/fabric-analytics-engineer-associate?tab=credentials-tab",
     img: "images/cert/microsoft.jpg" },
@@ -379,7 +387,7 @@ function renderCerts() {
     const img = c.img
       ? `<div class="cert-img"><img src="${src(c.img)}" alt="" loading="lazy"></div>`
       : `<div class="cert-img is-empty" aria-hidden="true">${esc(c.issuer)}</div>`;
-    const link = c.link ? `<a href="${esc(c.link)}" target="_blank" rel="noopener">View credential<span class="visually-hidden">: ${esc(c.title)}</span></a>` : "";
+    const link = c.link ? `<a class="cert-link" href="${esc(c.link)}" target="_blank" rel="noopener">View credential<span class="visually-hidden">: ${esc(c.title)}</span></a>` : "";
     return `<li class="cert">${img}<div class="cert-body"><h3>${esc(c.title)}</h3><p class="cert-issuer">${esc(c.issuer)}</p>${link}</div></li>`;
   }).join("");
 }
