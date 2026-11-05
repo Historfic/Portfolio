@@ -602,20 +602,36 @@ a { color: inherit; }
 /* Certifications */
 .certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
 .cert {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--navy-800);
   border: 1px solid var(--line-dark);
   border-radius: 14px;
   overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .cert-img { aspect-ratio: 4 / 3; background: #fff; overflow: hidden; }
-.cert-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.cert-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.35s ease; }
 .cert-img.is-empty { display: grid; place-items: center; background: var(--navy-700); color: var(--blue-soft); font-weight: 700; padding: 16px; text-align: center; }
 .cert-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .cert h3 { font-size: 0.98rem; line-height: 1.3; margin: 0; font-weight: 700; }
 .cert-issuer { margin: 0; color: var(--mist); font-size: 0.86rem; }
 .cert a { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 0.9rem; color: var(--blue-soft); text-underline-offset: 4px; }
+/* Same as the project cards: the link covers the whole card, so a click anywhere opens the credential */
+.cert-link::after { content: ""; position: absolute; inset: 0; }
+.cert-link:focus-visible { outline: none; }
+.cert:has(.cert-link:focus-visible) { outline: 3px solid var(--blue-soft); outline-offset: 3px; }
+.cert:has(.cert-link):hover { border-color: var(--blue); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cert:has(.cert-link):hover,
+  .cert:has(.cert-link:focus-visible) {
+    transform: scale(1.03);
+    box-shadow: 0 18px 44px rgba(4, 10, 22, 0.55);
+    z-index: 2;
+  }
+  .cert:has(.cert-link):hover .cert-img img { transform: scale(1.06); }
+}
 
 /* GitHub activity */
 .activity { background: #fff; border-radius: 18px; padding: clamp(16px, 3vw, 28px); border: 1px solid var(--line-light); overflow-x: auto; }
