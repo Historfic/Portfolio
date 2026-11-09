@@ -62,11 +62,14 @@
         </div>
 
         <div class="hero-visual">
-          <div class="portrait">
-            <picture>
-              <source srcset="images/v2/rafael-bashan.webp" type="image/webp">
-              <img src="images/v2/rafael-bashan.jpg" alt="Rafael Bashan" width="900" height="900">
-            </picture>
+          <div class="intro-video">
+            <video id="intro-video" autoplay muted loop playsinline preload="metadata"
+                   poster="images/v2/intro/rafael-intro-poster.jpg" width="720" height="1280"
+                   aria-label="Rafael Bashan introduces himself and his AI automation work">
+              <source src="images/v2/intro/rafael-intro.webm" type="video/webm">
+              <source src="images/v2/intro/rafael-intro.mp4" type="video/mp4">
+            </video>
+            <button class="intro-sound" type="button" aria-pressed="false">🔊 Tap for sound</button>
           </div>
           <ol class="flow" aria-label="Example: how one of my voice agents handles a call">
             <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>New call at 9:14 pm</b><span>Roof leak after the storm</span></span></li>
