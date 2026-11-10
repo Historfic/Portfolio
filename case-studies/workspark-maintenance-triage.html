@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workspark: case study | Rafael Bashan</title>
+  <meta name="description" content="How I built Workspark, an AI maintenance triage dashboard that turns tenant messages and calls into prioritised work orders, with emergencies first and a reason on every ticket.">
+  <meta property="og:title" content="Workspark: AI maintenance triage | Rafael Bashan">
+  <meta property="og:description" content="A case study: tenant reports and calls turned into checked, prioritised work orders on a live board, built in 72 hours.">
+  <meta property="og:image" content="https://www.rafaelbashan.tech/images/v2/case-studies/workspark-maintenance-triage/thumb.jpg">
+  <link rel="icon" href="../images/v2/rafael-bashan.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-name" href="../index.html" aria-label="Rafael Bashan, back to the home page">
+        <span class="name-letter" aria-hidden="true">R</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">f</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">e</span><span class="name-letter" aria-hidden="true">l</span><span class="name-letter" aria-hidden="true">&nbsp;</span><span class="name-letter" aria-hidden="true">B</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">s</span><span class="name-letter" aria-hidden="true">h</span><span class="name-letter" aria-hidden="true">a</span><span class="name-letter" aria-hidden="true">n</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero" id="top">
+      <div class="wrap">
+        <div class="hero-copy">
+          <a class="back-link" href="../index.html#work">Back to selected work</a>
+          <p class="hero-hello">Case study: AI maintenance triage for a property team</p>
+          <h1>Workspark</h1>
+          <p class="hero-intro">Tenants report maintenance problems the way people talk: two problems in one message, no unit number, a gas smell described as probably nothing. I built Workspark to read each report, split it into work orders, check the AI's answer against what the tenant actually said, and put the result on a live board with emergencies first. Tenants can type, call from the browser or ring a phone line.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#screens">See the screens</a>
+            <a class="btn btn-ghost" href="https://workspark-maintenance.vercel.app" target="_blank" rel="noopener">Open the live dashboard</a>
+          </div>
+          <dl class="stats">
+            <div><dt>sample reports triaged correctly</dt><dd>5/5</dd></div>
+            <div><dt>seconds from report to ticket</dt><dd>2.6–4.3</dd></div>
+            <div><dt>automated tests</dt><dd>161</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <ol class="flow" aria-label="How one maintenance report becomes a ticket on the board">
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>A tenant reports a problem</b><span>Typed, from the browser, or on the phone</span></span></li>
+            <li class="flow-step"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>Claude reads it, code checks it</b><span>One ticket per problem, units never guessed</span></span></li>
+            <li class="flow-step is-booked"><span class="flow-dot" aria-hidden="true"></span><span class="flow-text"><b>A ticket lands on the live board</b><span>Emergencies first, with the reason shown</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The screens</h2>
+          <p>This is the live dashboard on Vercel. Every ticket went through the real pipeline and model, but the tenants, units and messages are made up for the demo.</p>
+        </div>
+        <div class="case-shots is-screens">
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/workspark-maintenance-triage/dashboard.jpg" width="900" height="562" alt="Demo data: the Workspark board with a new-report form and Call intake button on the left, tiles for emergencies, follow-ups, open and resolved work, a bar of open tickets by priority, a seven-day intake chart, and a ticket table with emergencies at the top" loading="lazy">
+            <figcaption>The board. The tiles count emergencies, tickets needing follow-up, work in progress and resolved jobs, and they double as filters. Emergencies sort to the top, and a ticket with no unit gets an amber Unit unknown tag.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/workspark-maintenance-triage/gas-emergency.jpg" width="900" height="675" alt="Ticket detail for unit 7A: the tenant's message with the gas sentence highlighted, priority Emergency set by the gas odor rule, the tenant's words I don't know if it's a big deal, and an audit trail with the model, prompt version and latency" loading="lazy">
+            <figcaption>Sample report 4. The tenant hedges three times, and the gas-odor rule still makes it an emergency. The panel highlights the sentence that mattered, names the rule that decided, and keeps the tenant's own words about urgency.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/workspark-maintenance-triage/missing-unit.jpg" width="900" height="685" alt="Ticket detail for a heating report: High priority, an amber Unit unknown tag, the no heat in the cold rule, and a follow-up note saying the unit number was not given" loading="lazy">
+            <figcaption>Sample report 2. The tenant never said which unit, so none is invented. The ticket keeps its High priority and asks the team to follow up.</figcaption>
+          </figure>
+          <figure class="case-shot">
+            <img src="../images/v2/case-studies/workspark-maintenance-triage/two-tickets.jpg" width="900" height="616" alt="Ticket detail for a clogged sink in 12C, with the sink sentence highlighted and a second ticket from the same message listed below for the flickering hallway light" loading="lazy">
+            <figcaption>Sample report 3. One message becomes two work orders. The sink ticket lists its sibling, so the hallway light doesn't get lost once the sink is fixed.</figcaption>
+          </figure>
+          <figure class="case-shot case-phone">
+            <img src="../images/v2/case-studies/workspark-maintenance-triage/phone.jpg" width="780" height="1468" alt="The board on a phone: the four tiles, the priority bar, the seven-day intake chart and the first emergency ticket" loading="lazy">
+            <figcaption>The same board on a phone, with no sideways scrolling.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="brief">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The brief</h2>
+          <p>A property maintenance team needed tenant reports turned into work orders it could act on. The brief came with five sample reports, and each hid a trap: missing details, two problems in one message, and danger the tenant played down. It had to work end to end, from report to database to dashboard to status change, and a voice option was a bonus.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>Emergencies jump the queue</h3>
+            <p>Gas, smoke, water near electrics, flooding and no heat in the cold are always escalated, however calmly the tenant describes them.</p>
+          </li>
+          <li class="service">
+            <h3>One work order per problem</h3>
+            <p>A message about a clogged sink and a flickering light becomes two tickets, each with its own type, priority and location.</p>
+          </li>
+          <li class="service">
+            <h3>Gaps flagged, never filled in</h3>
+            <p>If the tenant didn't give a unit, the ticket says so and asks for a follow-up. A missing detail never lowers the priority.</p>
+          </li>
+          <li class="service">
+            <h3>A reason on every priority</h3>
+            <p>Each ticket shows the tenant's exact words, the line that mattered, and whether the AI or a safety rule set the priority.</p>
+          </li>
+          <li class="service">
+            <h3>Report it however you like</h3>
+            <p>Typed reports, calls from the browser and calls to the phone line all land in the same queue and go through the same checks.</p>
+          </li>
+          <li class="service">
+            <h3>One live board for the team</h3>
+            <p>New tickets and status changes appear on every open screen without a refresh, on a desktop or a phone.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How a report becomes a work order</h2>
+          <p>Every report takes the same six steps, typed or spoken. The AI does the reading. The parts where a mistake could hurt someone are plain code with tests.</p>
+        </div>
+        <ol class="timeline">
+          <li class="role">
+            <h3>A report comes in</h3>
+            <p class="role-text">Typed reports go straight to the API. Calls, from the browser or the phone line, reach a voice assistant that asks once for a missing detail and ends within two minutes. When a call ends, its transcript is sent to a webhook that checks a shared secret before doing anything.</p>
+            <p class="role-tools">Next.js API routes, Vapi, Claude Haiku 5.5</p>
+          </li>
+          <li class="role">
+            <h3>Claude reads the report</h3>
+            <p class="role-text">One model call per report returns a list of issues. Each issue has a type, a priority with a reason, the unit, the area and the tenant's own words as evidence. The answer is validated against a schema before anything is saved. It is retried once, and if it still fails the report is saved as a manual-review ticket, so nothing is lost.</p>
+            <p class="role-tools">Claude API (Fable 5.1), structured outputs, Zod</p>
+          </li>
+          <li class="role">
+            <h3>Code checks the facts</h3>
+            <p class="role-text">A unit survives only if the tenant actually said it, and every quote has to appear word for word in the report. Anything that fails is dropped and the ticket is flagged for follow-up.</p>
+            <p class="role-tools">TypeScript, Vitest</p>
+          </li>
+          <li class="role">
+            <h3>Safety rules set the floor</h3>
+            <p class="role-text">Tested rules look for gas, fire or smoke, water near electrics, flooding and no heat in the cold. They can raise a priority and record which rule fired and why. They can never lower one, and the model's own priority is kept beside the final one.</p>
+            <p class="role-tools">TypeScript, Vitest</p>
+          </li>
+          <li class="role">
+            <h3>Saved together, shown live</h3>
+            <p class="role-text">A report and all of its tickets are saved in one database transaction, so a half-saved report can't happen. Realtime pushes the new rows to every open board. The key the browser holds can only read.</p>
+            <p class="role-tools">Supabase Postgres, Realtime, row level security</p>
+          </li>
+          <li class="role">
+            <h3>The team works the queue</h3>
+            <p class="role-text">Moving a ticket from New to In progress to Done updates at once. If the save fails, the change is undone with a message beside the ticket.</p>
+            <p class="role-tools">React, Tailwind CSS, Vercel</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="caught">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What went wrong and what fixed it</h2>
+          <p>These are real problems from this build. Each change was reviewed before it merged, which is where most of these were caught.</p>
+        </div>
+        <ul class="services">
+          <li class="service">
+            <h3>A smoke alarm that hid real smoke</h3>
+            <p>A chirping smoke alarm usually means a low battery, so I told the fire rule to skip that phrase. The skip was too greedy and also hid real smoke mentioned in the same sentence. A review caught it, and the rule now skips only the alarm phrase itself.</p>
+          </li>
+          <li class="service">
+            <h3>Water through a light fixture</h3>
+            <p>"Water is pouring through the kitchen light" reached Emergency through the flooding rule, not the water-near-electrics rule, because that rule didn't know words like light, fixture or switch. I added them, with tests for natural phrasings, because the reason shown to the team matters as much as the priority.</p>
+          </li>
+          <li class="service">
+            <h3>A definition written too close to the test</h3>
+            <p>My first definition of a Low priority was shaped around sample report 5. A reviewer flagged it. I rewrote it in general terms and reran the evaluation against the real model, and it still passed 5 of 5.</p>
+          </li>
+          <li class="service">
+            <h3>Calls that could vanish</h3>
+            <p>The voice platform sends empty fields as null, and my first webhook treated one null as a broken message and dropped the whole call. The platform doesn't retry, so it would have been lost without a trace. A review caught it before the first real call. Nulls are accepted now, and any failure logs the call so it can be replayed.</p>
+          </li>
+          <li class="service">
+            <h3>A Cancel button that didn't cancel</h3>
+            <p>The voice SDK's start call never fails. It reports errors separately and returns nothing. Cancelling while a call was connecting could leave it running. The cancel and error rules now live in a small tested state machine, and a call that joins after a cancel is stopped.</p>
+          </li>
+          <li class="service">
+            <h3>A browser key with no limits</h3>
+            <p>The public key behind the Call button worked from any website and with any assistant in the voice account. Before the button went live, I restricted it to this one assistant and the two addresses that use it.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Results and limits</h2>
+          <p>Workspark is live with typed and voice intake. It was built in the 72 hours the brief allowed, so I have no measured business results yet: no response times or hours saved from a real team. Here is what I can show.</p>
+        </div>
+        <div class="case-results">
+          <div>
+            <h3>What it delivered</h3>
+            <ul>
+              <li>5 of 5 sample reports from the brief triaged exactly as required, checked by an evaluation that runs the real model.</li>
+              <li>2.6 to 4.3 seconds from a typed report to saved work orders.</li>
+              <li>Three ways to report, typed, a browser call and a phone line, all through the same checks.</li>
+              <li>Every ticket shows the tenant's words, what decided its priority, and an audit trail with the model and prompt version.</li>
+              <li>161 automated tests, a type, lint and format check on every pull request, and six pull requests merged after review.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>What it can't do yet</h3>
+            <ul>
+              <li>The safety rules match words, not meaning. "No gas smell" still raises a gas emergency, and water mentioned beside a light fixture can over-escalate.</li>
+              <li>There's no sign-in. Anyone with the link can add reports and change statuses. A per-address rate limit and size caps keep abuse small.</li>
+              <li>A carbon monoxide alarm is filed as Other instead of Gas, although the gas rule still makes it an emergency.</li>
+              <li>A spoken unit with no digits, such as "seven A", is dropped and flagged for follow-up.</li>
+              <li>The demo phone line is a New Zealand number, so callers elsewhere pay international rates. The browser call works anywhere.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="case-takeaway">The model reads. The rules decide when a mistake could hurt someone, and they can only make a ticket more urgent.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="wrap">
+        <div>
+          <h2>Getting more requests than your team can read?</h2>
+          <p>I build AI intake and triage that sorts messages and calls before a person opens them, and I'll tell you what it can't do yet. Book a free 30-minute call, or send me an email.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-calendly" href="https://calendly.com/raffymcfee/30min" target="_blank" rel="noopener">Book a meeting</a>
+            <a class="btn btn-ghost" href="mailto:raffymcfee@gmail.com">Send an email</a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div><dt>Email</dt><dd><a href="mailto:raffymcfee@gmail.com">raffymcfee@gmail.com</a></dd></div>
+          <div><dt>Location</dt><dd>Pampanga, Philippines</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Rafael Bashan</span>
+      <nav aria-label="Profiles">
+        <a href="https://github.com/Historfic" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-bashan-88486620b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01a2ed0ec55b03ceea" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/3424593" target="_blank" rel="noopener">OnlineJobs.ph</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="../script.js"></script>
+</body>
+</html>
