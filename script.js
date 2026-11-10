@@ -16,6 +16,9 @@ const TOOLS = [
 
 // group = which filter(s) the project sits under, space separated; cat = the label shown on the card
 const PROJECTS = [
+  { title: "Workspark: AI maintenance triage that turns tenant messages and calls into prioritised work orders", cat: "AI triage", group: "web dashboards voice",
+    tools: "Claude Code, Next.js, React, TypeScript, Tailwind CSS, Supabase (Postgres, Realtime), Claude API, Vapi, Vercel, Vitest",
+    link: "case-studies/workspark-maintenance-triage.html", img: "images/v2/case-studies/workspark-maintenance-triage/thumb.jpg" },
   { title: "Real estate brokerage system on GoHighLevel: 69 workflows, tested on a fresh install", cat: "CRM automation", group: "automation",
     tools: "Claude Code, GoHighLevel, GoHighLevel API, Python",
     link: "case-studies/brokerage-gohighlevel-system.html", img: "images/v2/case-studies/brokerage-gohighlevel-system/thumb.jpg" },
