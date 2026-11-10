@@ -419,6 +419,30 @@ function setupCalendly() {
   });
 }
 
+// Hero intro video: plays muted on its own; the button turns sound on and starts it
+// from the beginning so the visitor hears the whole intro. With reduced motion it
+// does not autoplay and shows normal controls instead.
+function setupIntroVideo() {
+  const video = document.getElementById("intro-video");
+  if (!video) return;
+  const button = document.querySelector(".intro-sound");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.removeAttribute("autoplay");
+    video.pause();
+    video.controls = true;
+    button.hidden = true;
+    return;
+  }
+  let heardFromStart = false;
+  button.addEventListener("click", () => {
+    video.muted = !video.muted;
+    if (!video.muted && !heardFromStart) { video.currentTime = 0; heardFromStart = true; }
+    video.play();
+    button.setAttribute("aria-pressed", String(!video.muted));
+    button.textContent = video.muted ? "🔊 Tap for sound" : "🔇 Mute";
+  });
+}
+
 // Case study pages share the header and Calendly but have no lists to render.
 if (document.getElementById("projects")) {
   renderTools();
@@ -427,3 +451,4 @@ if (document.getElementById("projects")) {
 }
 setupNav();
 setupCalendly();
+setupIntroVideo();
